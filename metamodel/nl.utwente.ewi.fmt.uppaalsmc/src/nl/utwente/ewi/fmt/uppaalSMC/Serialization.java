@@ -1,6 +1,6 @@
 package nl.utwente.ewi.fmt.uppaalSMC;
 
-import org.muml.uppaal.declarations.Parameter;
+import org.muml.uppaal.declarations.ParameterContainer;
 import org.muml.uppaal.expressions.Expression;
 import org.muml.uppaal.serialization.UppaalSerialization;
 import org.muml.uppaal.templates.Edge;
@@ -114,12 +114,12 @@ public class Serialization extends UppaalSerialization {
 		if (!t.getParameter().isEmpty()) {
 			boolean first = true;
 			ret.append("<parameter>");
-			for (Parameter p : t.getParameter()) {
+			for (ParameterContainer p : t.getParameter()) {
 				if (!first) {
 					ret.append(", ");
 					first = false;
 				}
-				ret.append(parameter(p));
+				ret.append(parametercontainer(p));
 			}
 			ret.append("</parameter>");
 		}

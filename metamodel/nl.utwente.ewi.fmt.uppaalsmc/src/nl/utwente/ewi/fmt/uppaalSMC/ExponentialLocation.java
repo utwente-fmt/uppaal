@@ -3,8 +3,7 @@
 package nl.utwente.ewi.fmt.uppaalSMC;
 
 import org.muml.uppaal.expressions.Expression;
-
-import org.muml.uppaal.templates.Location;
+import parsable.IdentifiableLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.muml.uppaal.templates.Location;
  * @model
  * @generated
  */
-public interface ExponentialLocation extends Location {
+public interface ExponentialLocation extends IdentifiableLocation {
 	/**
 	 * Returns the value of the '<em><b>Exit Rate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

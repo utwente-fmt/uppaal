@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.muml.uppaal.expressions.Expression;
-
-import org.muml.uppaal.templates.impl.LocationImpl;
+import parsable.impl.IdentifiableLocationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.muml.uppaal.templates.impl.LocationImpl;
  *
  * @generated
  */
-public class ExponentialLocationImpl extends LocationImpl implements ExponentialLocation {
+public class ExponentialLocationImpl extends IdentifiableLocationImpl implements ExponentialLocation {
 	/**
 	 * The cached value of the '{@link #getExitRate() <em>Exit Rate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,6 +64,7 @@ public class ExponentialLocationImpl extends LocationImpl implements Exponential
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExitRate() {
 		return exitRate;
 	}
@@ -89,6 +89,7 @@ public class ExponentialLocationImpl extends LocationImpl implements Exponential
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExitRate(Expression newExitRate) {
 		if (newExitRate != exitRate) {
 			NotificationChain msgs = null;

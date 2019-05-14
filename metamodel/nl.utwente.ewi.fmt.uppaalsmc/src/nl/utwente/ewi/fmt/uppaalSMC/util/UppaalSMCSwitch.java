@@ -22,6 +22,7 @@ import org.muml.uppaal.types.Type;
 import org.muml.uppaal.visuals.ColoredElement;
 import org.muml.uppaal.visuals.LinearElement;
 import org.muml.uppaal.visuals.PlanarElement;
+import parsable.IdentifiableLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,6 +122,7 @@ public class UppaalSMCSwitch<T> extends Switch<T> {
 			case UppaalSMCPackage.EXPONENTIAL_LOCATION: {
 				ExponentialLocation exponentialLocation = (ExponentialLocation)theEObject;
 				T result = caseExponentialLocation(exponentialLocation);
+				if (result == null) result = caseIdentifiableLocation(exponentialLocation);
 				if (result == null) result = caseLocation(exponentialLocation);
 				if (result == null) result = caseNamedElement(exponentialLocation);
 				if (result == null) result = caseCommentableElement(exponentialLocation);
@@ -340,6 +342,21 @@ public class UppaalSMCSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEdge(Edge object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifiable Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifiable Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifiableLocation(IdentifiableLocation object) {
 		return null;
 	}
 

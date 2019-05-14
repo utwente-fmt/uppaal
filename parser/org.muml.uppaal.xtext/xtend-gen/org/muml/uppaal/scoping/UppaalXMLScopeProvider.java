@@ -3,8 +3,10 @@
  */
 package org.muml.uppaal.scoping;
 
+import com.google.common.base.Function;
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import java.util.Iterator;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -37,10 +39,6 @@ import org.muml.uppaal.templates.Template;
 import org.muml.uppaal.types.DeclaredType;
 import org.muml.uppaal.types.StdLib;
 import org.muml.uppaal.types.StructTypeSpecification;
-
-import com.google.common.base.Function;
-import com.google.common.base.Objects;
-import com.google.common.collect.Iterables;
 
 /**
  * This class contains custom scoping description.

@@ -5,6 +5,7 @@ package org.muml.uppaal.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
+import org.muml.uppaal.ui.AbstractUppaalXMLUiModule;
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.

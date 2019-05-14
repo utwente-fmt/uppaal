@@ -3,6 +3,8 @@
  */
 package org.muml.uppaal.ide;
 
+import org.muml.uppaal.ide.AbstractUppaalXMLIdeModule;
+
 /**
  * Use this class to register ide components.
  */

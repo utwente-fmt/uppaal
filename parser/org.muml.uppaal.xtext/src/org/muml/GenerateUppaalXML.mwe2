@@ -33,7 +33,7 @@ Workflow {
 		language = StandardLanguage {
 			name = "org.muml.UppaalXML"
 			fileExtensions = "xml"
-			referencedResource = "platform:/resource/org.muml.uppaal.parsable/model/parsable.genmodel"
+			referencedResource = "platform:/resource/nl.utwente.ewi.fmt.uppaalsmc/model/uppaalSMC.genmodel"
 
 			serializer = {
 				generateStub = false

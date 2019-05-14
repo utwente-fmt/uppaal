@@ -20,4 +20,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaalSMC.ecore#//ExponentialLocation/exitRate"/>
     </genClasses>
   </genPackages>
+  <genPackages prefix="Parsable" ecorePackage="../../org.muml.uppaal.parsable/model/parsable.ecore#/">
+    <genClasses ecoreClass="../../org.muml.uppaal.parsable/model/parsable.ecore#//IdentifiableLocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.muml.uppaal.parsable/model/parsable.ecore#//IdentifiableLocation/id"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>

@@ -64,6 +64,7 @@ public class NSTAImpl extends NTAImpl implements NSTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DoubleType getDouble() {
 		return double_;
 	}
@@ -88,6 +89,7 @@ public class NSTAImpl extends NTAImpl implements NSTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDouble(DoubleType newDouble) {
 		if (newDouble != double_) {
 			NotificationChain msgs = null;

@@ -3,6 +3,8 @@
  */
 package org.muml.uppaal;
 
+import org.muml.uppaal.UppaalXMLStandaloneSetupGenerated;
+
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */

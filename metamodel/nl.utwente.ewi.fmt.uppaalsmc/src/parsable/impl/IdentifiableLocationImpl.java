@@ -1,9 +1,6 @@
 /**
  */
-package nl.utwente.ewi.fmt.uppaalSMC.impl;
-
-import nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge;
-import nl.utwente.ewi.fmt.uppaalSMC.UppaalSMCPackage;
+package parsable.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -11,48 +8,51 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.muml.uppaal.templates.impl.EdgeImpl;
+import org.muml.uppaal.templates.impl.LocationImpl;
+
+import parsable.IdentifiableLocation;
+import parsable.ParsablePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Chance Edge</b></em>'.
+ * An implementation of the model object '<em><b>Identifiable Location</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link nl.utwente.ewi.fmt.uppaalSMC.impl.ChanceEdgeImpl#getWeight <em>Weight</em>}</li>
+ *   <li>{@link parsable.impl.IdentifiableLocationImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
+public class IdentifiableLocationImpl extends LocationImpl implements IdentifiableLocation {
 	/**
-	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeight()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int WEIGHT_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWeight()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected int weight = WEIGHT_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChanceEdgeImpl() {
+	protected IdentifiableLocationImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UppaalSMCPackage.Literals.CHANCE_EDGE;
+		return ParsablePackage.Literals.IDENTIFIABLE_LOCATION;
 	}
 
 	/**
@@ -72,8 +72,8 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	 * @generated
 	 */
 	@Override
-	public int getWeight() {
-		return weight;
+	public String getId() {
+		return id;
 	}
 
 	/**
@@ -82,11 +82,11 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	 * @generated
 	 */
 	@Override
-	public void setWeight(int newWeight) {
-		int oldWeight = weight;
-		weight = newWeight;
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UppaalSMCPackage.CHANCE_EDGE__WEIGHT, oldWeight, weight));
+			eNotify(new ENotificationImpl(this, Notification.SET, ParsablePackage.IDENTIFIABLE_LOCATION__ID, oldId, id));
 	}
 
 	/**
@@ -97,8 +97,8 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UppaalSMCPackage.CHANCE_EDGE__WEIGHT:
-				return getWeight();
+			case ParsablePackage.IDENTIFIABLE_LOCATION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,8 +111,8 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UppaalSMCPackage.CHANCE_EDGE__WEIGHT:
-				setWeight((Integer)newValue);
+			case ParsablePackage.IDENTIFIABLE_LOCATION__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,8 +126,8 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UppaalSMCPackage.CHANCE_EDGE__WEIGHT:
-				setWeight(WEIGHT_EDEFAULT);
+			case ParsablePackage.IDENTIFIABLE_LOCATION__ID:
+				setId(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -141,8 +141,8 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UppaalSMCPackage.CHANCE_EDGE__WEIGHT:
-				return weight != WEIGHT_EDEFAULT;
+			case ParsablePackage.IDENTIFIABLE_LOCATION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -157,10 +157,10 @@ public class ChanceEdgeImpl extends EdgeImpl implements ChanceEdge {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (weight: ");
-		result.append(weight);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ChanceEdgeImpl
+} //IdentifiableLocationImpl

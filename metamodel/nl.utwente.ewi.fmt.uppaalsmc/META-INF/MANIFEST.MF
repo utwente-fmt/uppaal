@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: nl.utwente.ewi.fmt.uppaalsmc;singleton:=true
+Automatic-Module-Name: nl.utwente.ewi.fmt.uppaalsmc
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: nl.utwente.ewi.fmt.uppaalsmc$Implementation
@@ -11,10 +12,14 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: nl.utwente.ewi.fmt,
  nl.utwente.ewi.fmt.uppaalSMC,
  nl.utwente.ewi.fmt.uppaalSMC.impl,
- nl.utwente.ewi.fmt.uppaalSMC.util
+ nl.utwente.ewi.fmt.uppaalSMC.util,
+ parsable,
+ parsable.impl,
+ parsable.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.muml.uppaal;bundle-version="0.5.0";visibility:=reexport,
- org.muml.uppaal.serialization;bundle-version="0.5.0"
+ org.muml.uppaal.serialization;bundle-version="0.5.0",
+ org.muml.uppaal.parsable
 Bundle-ActivationPolicy: lazy

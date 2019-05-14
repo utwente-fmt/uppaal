@@ -23,6 +23,8 @@ import org.muml.uppaal.expressions.ExpressionsPackage;
 import org.muml.uppaal.templates.TemplatesPackage;
 
 import org.muml.uppaal.types.TypesPackage;
+import parsable.ParsablePackage;
+import parsable.impl.ParsablePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,7 +96,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link UppaalSMCPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -108,23 +110,29 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 		if (isInited) return (UppaalSMCPackage)EPackage.Registry.INSTANCE.getEPackage(UppaalSMCPackage.eNS_URI);
 
 		// Obtain or create and register package
-		UppaalSMCPackageImpl theUppaalSMCPackage = (UppaalSMCPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UppaalSMCPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new UppaalSMCPackageImpl());
+		Object registeredUppaalSMCPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		UppaalSMCPackageImpl theUppaalSMCPackage = registeredUppaalSMCPackage instanceof UppaalSMCPackageImpl ? (UppaalSMCPackageImpl)registeredUppaalSMCPackage : new UppaalSMCPackageImpl();
 
 		isInited = true;
 
 		// Initialize simple dependencies
 		UppaalPackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ParsablePackage.eNS_URI);
+		ParsablePackageImpl theParsablePackage = (ParsablePackageImpl)(registeredPackage instanceof ParsablePackageImpl ? registeredPackage : ParsablePackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theUppaalSMCPackage.createPackageContents();
+		theParsablePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUppaalSMCPackage.initializePackageContents();
+		theParsablePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theUppaalSMCPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(UppaalSMCPackage.eNS_URI, theUppaalSMCPackage);
 		return theUppaalSMCPackage;
@@ -135,6 +143,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNSTA() {
 		return nstaEClass;
 	}
@@ -144,6 +153,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNSTA_Double() {
 		return (EReference)nstaEClass.getEStructuralFeatures().get(0);
 	}
@@ -153,6 +163,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDoubleType() {
 		return doubleTypeEClass;
 	}
@@ -162,6 +173,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChanceNode() {
 		return chanceNodeEClass;
 	}
@@ -171,6 +183,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChanceEdge() {
 		return chanceEdgeEClass;
 	}
@@ -180,6 +193,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChanceEdge_Weight() {
 		return (EAttribute)chanceEdgeEClass.getEStructuralFeatures().get(0);
 	}
@@ -189,6 +203,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExponentialLocation() {
 		return exponentialLocationEClass;
 	}
@@ -198,6 +213,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExponentialLocation_ExitRate() {
 		return (EReference)exponentialLocationEClass.getEStructuralFeatures().get(0);
 	}
@@ -207,6 +223,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UppaalSMCFactory getUppaalSMCFactory() {
 		return (UppaalSMCFactory)getEFactoryInstance();
 	}
@@ -271,6 +288,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 		UppaalPackage theUppaalPackage = (UppaalPackage)EPackage.Registry.INSTANCE.getEPackage(UppaalPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		TemplatesPackage theTemplatesPackage = (TemplatesPackage)EPackage.Registry.INSTANCE.getEPackage(TemplatesPackage.eNS_URI);
+		ParsablePackage theParsablePackage = (ParsablePackage)EPackage.Registry.INSTANCE.getEPackage(ParsablePackage.eNS_URI);
 		ExpressionsPackage theExpressionsPackage = (ExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
 
 		// Create type parameters
@@ -282,7 +300,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 		doubleTypeEClass.getESuperTypes().add(theTypesPackage.getType());
 		chanceNodeEClass.getESuperTypes().add(theTemplatesPackage.getLocation());
 		chanceEdgeEClass.getESuperTypes().add(theTemplatesPackage.getEdge());
-		exponentialLocationEClass.getESuperTypes().add(theTemplatesPackage.getLocation());
+		exponentialLocationEClass.getESuperTypes().add(theParsablePackage.getIdentifiableLocation());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(nstaEClass, nl.utwente.ewi.fmt.uppaalSMC.NSTA.class, "NSTA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

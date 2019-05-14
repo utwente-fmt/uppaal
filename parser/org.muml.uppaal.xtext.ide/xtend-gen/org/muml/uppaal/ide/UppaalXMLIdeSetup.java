@@ -3,12 +3,12 @@
  */
 package org.muml.uppaal.ide;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import org.eclipse.xtext.util.Modules2;
 import org.muml.uppaal.UppaalXMLRuntimeModule;
 import org.muml.uppaal.UppaalXMLStandaloneSetup;
-
-import com.google.inject.Guice;
-import com.google.inject.Injector;
+import org.muml.uppaal.ide.UppaalXMLIdeModule;
 
 /**
  * Initialization support for running Xtext languages as language servers.

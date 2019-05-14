@@ -3,6 +3,8 @@
  */
 package org.muml.uppaal.validation;
 
+import org.muml.uppaal.validation.AbstractUppaalXMLValidator;
+
 /**
  * Custom validation rules.
  * 

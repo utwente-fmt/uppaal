@@ -24,6 +24,7 @@ import org.muml.uppaal.types.Type;
 import org.muml.uppaal.visuals.ColoredElement;
 import org.muml.uppaal.visuals.LinearElement;
 import org.muml.uppaal.visuals.PlanarElement;
+import parsable.IdentifiableLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,6 +137,10 @@ public class UppaalSMCAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEdge(Edge object) {
 				return createEdgeAdapter();
+			}
+			@Override
+			public Adapter caseIdentifiableLocation(IdentifiableLocation object) {
+				return createIdentifiableLocationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -350,6 +355,20 @@ public class UppaalSMCAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEdgeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link parsable.IdentifiableLocation <em>Identifiable Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see parsable.IdentifiableLocation
+	 * @generated
+	 */
+	public Adapter createIdentifiableLocationAdapter() {
 		return null;
 	}
 

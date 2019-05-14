@@ -12,6 +12,7 @@ import org.muml.uppaal.UppaalPackage;
 import org.muml.uppaal.templates.TemplatesPackage;
 
 import org.muml.uppaal.types.TypesPackage;
+import parsable.ParsablePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +45,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://fmt.ewi.utwente.nl/FMT/AFTModel/uppaalSMC";
+	String eNS_URI = "http://fmt.ewi.utwente.nl/uppaalSMC";
 
 	/**
 	 * The package namespace name.
@@ -118,51 +119,6 @@ public interface UppaalSMCPackage extends EPackage {
 	int NSTA__SYSTEM_DECLARATIONS = UppaalPackage.NTA__SYSTEM_DECLARATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Int</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NSTA__INT = UppaalPackage.NTA__INT;
-
-	/**
-	 * The feature id for the '<em><b>Bool</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NSTA__BOOL = UppaalPackage.NTA__BOOL;
-
-	/**
-	 * The feature id for the '<em><b>Clock</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NSTA__CLOCK = UppaalPackage.NTA__CLOCK;
-
-	/**
-	 * The feature id for the '<em><b>Chan</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NSTA__CHAN = UppaalPackage.NTA__CHAN;
-
-	/**
-	 * The feature id for the '<em><b>Void</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NSTA__VOID = UppaalPackage.NTA__VOID;
-
-	/**
 	 * The feature id for the '<em><b>Double</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,15 +156,6 @@ public interface UppaalSMCPackage extends EPackage {
 	int DOUBLE_TYPE__NAME = TypesPackage.TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Index</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOUBLE_TYPE__INDEX = TypesPackage.TYPE__INDEX;
-
-	/**
 	 * The feature id for the '<em><b>Base Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -216,15 +163,6 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @ordered
 	 */
 	int DOUBLE_TYPE__BASE_TYPE = TypesPackage.TYPE__BASE_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Specification</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOUBLE_TYPE__TYPE_SPECIFICATION = TypesPackage.TYPE__TYPE_SPECIFICATION;
 
 	/**
 	 * The number of structural features of the '<em>Double Type</em>' class.
@@ -273,15 +211,6 @@ public interface UppaalSMCPackage extends EPackage {
 	int CHANCE_NODE__POSITION = TemplatesPackage.LOCATION__POSITION;
 
 	/**
-	 * The feature id for the '<em><b>Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANCE_NODE__COLOR = TemplatesPackage.LOCATION__COLOR;
-
-	/**
 	 * The feature id for the '<em><b>Color Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -316,6 +245,24 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHANCE_NODE__LOCATION_TIME_KIND = TemplatesPackage.LOCATION__LOCATION_TIME_KIND;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANCE_NODE__INCOMING_EDGES = TemplatesPackage.LOCATION__INCOMING_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANCE_NODE__OUTGOING_EDGES = TemplatesPackage.LOCATION__OUTGOING_EDGES;
 
 	/**
 	 * The number of structural features of the '<em>Chance Node</em>' class.
@@ -353,15 +300,6 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHANCE_EDGE__COMMENT = TemplatesPackage.EDGE__COMMENT;
-
-	/**
-	 * The feature id for the '<em><b>Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHANCE_EDGE__COLOR = TemplatesPackage.EDGE__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Color Code</b></em>' attribute.
@@ -470,7 +408,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__NAME = TemplatesPackage.LOCATION__NAME;
+	int EXPONENTIAL_LOCATION__NAME = ParsablePackage.IDENTIFIABLE_LOCATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -479,7 +417,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__COMMENT = TemplatesPackage.LOCATION__COMMENT;
+	int EXPONENTIAL_LOCATION__COMMENT = ParsablePackage.IDENTIFIABLE_LOCATION__COMMENT;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -488,16 +426,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__POSITION = TemplatesPackage.LOCATION__POSITION;
-
-	/**
-	 * The feature id for the '<em><b>Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPONENTIAL_LOCATION__COLOR = TemplatesPackage.LOCATION__COLOR;
+	int EXPONENTIAL_LOCATION__POSITION = ParsablePackage.IDENTIFIABLE_LOCATION__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Color Code</b></em>' attribute.
@@ -506,7 +435,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__COLOR_CODE = TemplatesPackage.LOCATION__COLOR_CODE;
+	int EXPONENTIAL_LOCATION__COLOR_CODE = ParsablePackage.IDENTIFIABLE_LOCATION__COLOR_CODE;
 
 	/**
 	 * The feature id for the '<em><b>Parent Template</b></em>' container reference.
@@ -515,7 +444,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__PARENT_TEMPLATE = TemplatesPackage.LOCATION__PARENT_TEMPLATE;
+	int EXPONENTIAL_LOCATION__PARENT_TEMPLATE = ParsablePackage.IDENTIFIABLE_LOCATION__PARENT_TEMPLATE;
 
 	/**
 	 * The feature id for the '<em><b>Invariant</b></em>' containment reference.
@@ -524,7 +453,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__INVARIANT = TemplatesPackage.LOCATION__INVARIANT;
+	int EXPONENTIAL_LOCATION__INVARIANT = ParsablePackage.IDENTIFIABLE_LOCATION__INVARIANT;
 
 	/**
 	 * The feature id for the '<em><b>Location Time Kind</b></em>' attribute.
@@ -533,7 +462,34 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__LOCATION_TIME_KIND = TemplatesPackage.LOCATION__LOCATION_TIME_KIND;
+	int EXPONENTIAL_LOCATION__LOCATION_TIME_KIND = ParsablePackage.IDENTIFIABLE_LOCATION__LOCATION_TIME_KIND;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIAL_LOCATION__INCOMING_EDGES = ParsablePackage.IDENTIFIABLE_LOCATION__INCOMING_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Edges</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIAL_LOCATION__OUTGOING_EDGES = ParsablePackage.IDENTIFIABLE_LOCATION__OUTGOING_EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPONENTIAL_LOCATION__ID = ParsablePackage.IDENTIFIABLE_LOCATION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Exit Rate</b></em>' containment reference.
@@ -542,7 +498,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION__EXIT_RATE = TemplatesPackage.LOCATION_FEATURE_COUNT + 0;
+	int EXPONENTIAL_LOCATION__EXIT_RATE = ParsablePackage.IDENTIFIABLE_LOCATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Exponential Location</em>' class.
@@ -551,7 +507,7 @@ public interface UppaalSMCPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPONENTIAL_LOCATION_FEATURE_COUNT = TemplatesPackage.LOCATION_FEATURE_COUNT + 1;
+	int EXPONENTIAL_LOCATION_FEATURE_COUNT = ParsablePackage.IDENTIFIABLE_LOCATION_FEATURE_COUNT + 1;
 
 	/**
 	 * Returns the meta object for class '{@link nl.utwente.ewi.fmt.uppaalSMC.NSTA <em>NSTA</em>}'.
