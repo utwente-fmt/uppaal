@@ -6,6 +6,7 @@
     copyrightFields="false" usedGenPackages="../../org.muml.uppaal/model/uppaal.genmodel#//uppaal"
     importOrganizing="true">
   <foreignModel>uppaalSMC.ecore</foreignModel>
+  <foreignModel>parsable.ecore</foreignModel>
   <genPackages prefix="UppaalSMC" basePackage="nl.utwente.ewi.fmt" resource="XML"
       disposableProviderFactory="true" ecorePackage="uppaalSMC.ecore#/" publicationLocation="">
     <genClasses ecoreClass="uppaalSMC.ecore#//NSTA">
@@ -18,11 +19,6 @@
     </genClasses>
     <genClasses ecoreClass="uppaalSMC.ecore#//ExponentialLocation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaalSMC.ecore#//ExponentialLocation/exitRate"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Parsable" ecorePackage="../../org.muml.uppaal.parsable/model/parsable.ecore#/">
-    <genClasses ecoreClass="../../org.muml.uppaal.parsable/model/parsable.ecore#//IdentifiableLocation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.muml.uppaal.parsable/model/parsable.ecore#//IdentifiableLocation/id"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

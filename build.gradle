@@ -1,0 +1,71 @@
+plugins {
+    id 'java-library'
+    id "org.xtext.xtend" version "2.0.2"
+}
+apply plugin: 'eclipse'
+
+eclipse {
+    classpath {
+      file {
+            whenMerged {
+                def source = entries.find { it.path == 'main/java' }
+                source.entryAttributes['ignore_optional_problems'] = 'true'
+            }
+        }
+    }
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'parser/org.muml.uppaal.xtext/src'
+			srcDir 'parser/org.muml.uppaal.xtext/src-gen'
+			srcDir 'requirements/org.muml.uppaal.requirements/src'
+			srcDir 'metamodel/nl.utwente.ewi.fmt.uppaalsmc/src'
+			srcDir 'metamodel/org.muml.uppaal/src'
+			srcDir 'serializer/org.muml.uppaal.serialization/src'
+		}
+		resources {
+			srcDir 'parser/org.muml.uppaal.xtext/src-gen'
+		}
+	}
+}
+sourceSets.main.resources.filter.include('**/*.xtextbin', '**/*.g', '**/*.tokens')
+repositories {
+    jcenter()
+	maven {
+		url 'https://repo.eclipse.org/content/groups/releases'
+	}
+
+}
+
+
+dependencies {
+	compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext', version: '2.16.0'
+	compile group: 'org.eclipse.ocl', name: 'org.eclipse.ocl', version: '3.4.2.v20140725-2242'
+	compile group: 'org.eclipse.ocl', name: 'org.eclipse.ocl.common', version: '1.2.0.v20140610-0641'
+	compile group: 'org.eclipse.ocl', name: 'org.eclipse.ocl.ecore', version: '3.3.100.v20140610-0641'
+	compileOnly group: 'org.eclipse.core', name: 'org.eclipse.core.runtime', version: '3.10.0.v20140318-2214'
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore', version: '2.10.1.v20140901-1043'
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.common', version: '2.10.1.v20140901-1043'
+	
+	compile group: 'lpg.runtime', name: 'java', version: '2.0.17-v201004271640'
+	
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.mwe2.launch', version: '2.9.1.201705291010'
+	compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.common.types', version: '2.16.0'
+	compile group: 'org.eclipse.xtext', name: 'org.eclipse.xtext.xtext.generator', version: '2.16.0'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+task xText(type: JavaExec) {
+	main = 'org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher'
+	classpath = configurations.compile
+	classpath += sourceSets.main.runtimeClasspath
+	classpath += files("metamodel/org.muml.uppaal/src")
+	classpath += files("metamodel/nl.utwente.ewi.fmt.uppaalsmc/src")
+	inputs.file "parser/org/muml/uppaal/xtext/src/org/muml/uppaal/GenerateUppaalXML.mwe2"
+	inputs.file "parser/org/muml/uppaal/xtext/src/org/muml/uppaal/UppaalXML.xtext"
+	args += "parser/org/muml/uppaal/xtext/src/org/muml/uppaal/GenerateUppaalXML.mwe2"
+}
