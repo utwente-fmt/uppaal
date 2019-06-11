@@ -62,6 +62,7 @@ public class ArrayInitializerImpl extends InitializerImpl implements ArrayInitia
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Initializer> getInitializer() {
 		if (initializer == null) {
 			initializer = new EObjectContainmentEList<Initializer>(Initializer.class, this, DeclarationsPackage.ARRAY_INITIALIZER__INITIALIZER);

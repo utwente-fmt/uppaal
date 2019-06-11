@@ -99,6 +99,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocalDeclarations getDeclarations() {
 		return declarations;
 	}
@@ -123,6 +124,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclarations(LocalDeclarations newDeclarations) {
 		if (newDeclarations != declarations) {
 			NotificationChain msgs = null;
@@ -142,6 +144,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Location> getLocation() {
 		if (location == null) {
 			location = new EObjectContainmentWithInverseEList<Location>(Location.class, this, TemplatesPackage.TEMPLATE__LOCATION, TemplatesPackage.LOCATION__PARENT_TEMPLATE);
@@ -154,6 +157,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Edge> getEdge() {
 		if (edge == null) {
 			edge = new EObjectContainmentWithInverseEList<Edge>(Edge.class, this, TemplatesPackage.TEMPLATE__EDGE, TemplatesPackage.EDGE__PARENT_TEMPLATE);
@@ -166,6 +170,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location getInit() {
 		if (init != null && init.eIsProxy()) {
 			InternalEObject oldInit = (InternalEObject)init;
@@ -192,6 +197,7 @@ public class TemplateImpl extends AbstractTemplateImpl implements Template {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInit(Location newInit) {
 		Location oldInit = init;
 		init = newInit;

@@ -88,6 +88,7 @@ public abstract class AbstractTemplateImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -97,6 +98,7 @@ public abstract class AbstractTemplateImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		String oldComment = comment;
 		comment = newComment;
@@ -109,6 +111,7 @@ public abstract class AbstractTemplateImpl extends NamedElementImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, TemplatesPackage.ABSTRACT_TEMPLATE__PARAMETER);

@@ -67,6 +67,7 @@ public class MinMaxExpressionImpl extends BinaryExpressionImpl implements MinMax
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MinMaxOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class MinMaxExpressionImpl extends BinaryExpressionImpl implements MinMax
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(MinMaxOperator newOperator) {
 		MinMaxOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

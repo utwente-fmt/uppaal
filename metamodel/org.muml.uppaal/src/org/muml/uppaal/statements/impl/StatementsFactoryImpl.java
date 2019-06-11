@@ -83,6 +83,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -93,6 +94,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EmptyStatement createEmptyStatement() {
 		EmptyStatementImpl emptyStatement = new EmptyStatementImpl();
 		return emptyStatement;
@@ -103,6 +105,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ForLoop createForLoop() {
 		ForLoopImpl forLoop = new ForLoopImpl();
 		return forLoop;
@@ -113,6 +116,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Iteration createIteration() {
 		IterationImpl iteration = new IterationImpl();
 		return iteration;
@@ -123,6 +127,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WhileLoop createWhileLoop() {
 		WhileLoopImpl whileLoop = new WhileLoopImpl();
 		return whileLoop;
@@ -133,6 +138,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DoWhileLoop createDoWhileLoop() {
 		DoWhileLoopImpl doWhileLoop = new DoWhileLoopImpl();
 		return doWhileLoop;
@@ -143,6 +149,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IfStatement createIfStatement() {
 		IfStatementImpl ifStatement = new IfStatementImpl();
 		return ifStatement;
@@ -153,6 +160,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReturnStatement createReturnStatement() {
 		ReturnStatementImpl returnStatement = new ReturnStatementImpl();
 		return returnStatement;
@@ -163,6 +171,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionStatement createExpressionStatement() {
 		ExpressionStatementImpl expressionStatement = new ExpressionStatementImpl();
 		return expressionStatement;
@@ -173,6 +182,7 @@ public class StatementsFactoryImpl extends EFactoryImpl implements StatementsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatementsPackage getStatementsPackage() {
 		return (StatementsPackage)getEPackage();
 	}

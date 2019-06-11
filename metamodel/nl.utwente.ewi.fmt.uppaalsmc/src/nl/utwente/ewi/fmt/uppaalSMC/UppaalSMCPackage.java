@@ -2,7 +2,6 @@
  */
 package nl.utwente.ewi.fmt.uppaalSMC;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -436,7 +435,7 @@ public interface UppaalSMCPackage extends EPackage {
 	int CHANCE_EDGE__SELECTION = TemplatesPackage.EDGE__SELECTION;
 
 	/**
-	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * The feature id for the '<em><b>Weight</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -605,15 +604,15 @@ public interface UppaalSMCPackage extends EPackage {
 	EClass getChanceEdge();
 
 	/**
-	 * Returns the meta object for the attribute '{@link nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge#getWeight <em>Weight</em>}'.
+	 * Returns the meta object for the containment reference '{@link nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge#getWeight <em>Weight</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @return the meta object for the containment reference '<em>Weight</em>'.
 	 * @see nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge#getWeight()
 	 * @see #getChanceEdge()
 	 * @generated
 	 */
-	EAttribute getChanceEdge_Weight();
+	EReference getChanceEdge_Weight();
 
 	/**
 	 * Returns the meta object for class '{@link nl.utwente.ewi.fmt.uppaalSMC.ExponentialLocation <em>Exponential Location</em>}'.
@@ -708,12 +707,12 @@ public interface UppaalSMCPackage extends EPackage {
 		EClass CHANCE_EDGE = eINSTANCE.getChanceEdge();
 
 		/**
-		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Weight</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CHANCE_EDGE__WEIGHT = eINSTANCE.getChanceEdge_Weight();
+		EReference CHANCE_EDGE__WEIGHT = eINSTANCE.getChanceEdge_Weight();
 
 		/**
 		 * The meta object literal for the '{@link nl.utwente.ewi.fmt.uppaalSMC.impl.ExponentialLocationImpl <em>Exponential Location</em>}' class.

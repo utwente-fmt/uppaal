@@ -67,6 +67,7 @@ public class UppaalFactoryImpl extends EFactoryImpl implements UppaalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NTA createNTA() {
 		NTAImpl nta = new NTAImpl();
 		return nta;
@@ -77,6 +78,7 @@ public class UppaalFactoryImpl extends EFactoryImpl implements UppaalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UppaalPackage getUppaalPackage() {
 		return (UppaalPackage)getEPackage();
 	}

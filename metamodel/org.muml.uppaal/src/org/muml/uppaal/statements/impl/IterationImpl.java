@@ -90,6 +90,7 @@ public class IterationImpl extends StatementImpl implements Iteration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getTypeDefinition() {
 		return typeDefinition;
 	}
@@ -114,6 +115,7 @@ public class IterationImpl extends StatementImpl implements Iteration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeDefinition(TypeDefinition newTypeDefinition) {
 		if (newTypeDefinition != typeDefinition) {
 			NotificationChain msgs = null;
@@ -133,6 +135,7 @@ public class IterationImpl extends StatementImpl implements Iteration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Variable> getVariable() {
 		if (variable == null) {
 			variable = new EObjectContainmentWithInverseEList<Variable>(Variable.class, this, StatementsPackage.ITERATION__VARIABLE, DeclarationsPackage.VARIABLE__CONTAINER);
@@ -145,6 +148,7 @@ public class IterationImpl extends StatementImpl implements Iteration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getStatement() {
 		return statement;
 	}
@@ -169,6 +173,7 @@ public class IterationImpl extends StatementImpl implements Iteration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatement(Statement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;

@@ -114,6 +114,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Template createTemplate() {
 		TemplateImpl template = new TemplateImpl();
 		return template;
@@ -124,6 +125,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinedTemplate createRedefinedTemplate() {
 		RedefinedTemplateImpl redefinedTemplate = new RedefinedTemplateImpl();
 		return redefinedTemplate;
@@ -134,6 +136,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location createLocation() {
 		LocationImpl location = new LocationImpl();
 		return location;
@@ -144,6 +147,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Edge createEdge() {
 		EdgeImpl edge = new EdgeImpl();
 		return edge;
@@ -154,6 +158,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Synchronization createSynchronization() {
 		SynchronizationImpl synchronization = new SynchronizationImpl();
 		return synchronization;
@@ -164,6 +169,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Selection createSelection() {
 		SelectionImpl selection = new SelectionImpl();
 		return selection;
@@ -214,6 +220,7 @@ public class TemplatesFactoryImpl extends EFactoryImpl implements TemplatesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplatesPackage getTemplatesPackage() {
 		return (TemplatesPackage)getEPackage();
 	}

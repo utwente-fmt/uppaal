@@ -31,6 +31,16 @@ import org.muml.uppaal.types.TypesPackage;
  */
 public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 	/**
+	 * The cached setting delegate for the '{@link #getTypeDefinition() <em>Type Definition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeDefinition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate TYPE_DEFINITION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)TypesPackage.Literals.DECLARED_TYPE__TYPE_DEFINITION).getSettingDelegate();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -54,6 +64,7 @@ public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDeclaration getTypeDeclaration() {
 		if (eContainerFeatureID() != TypesPackage.DECLARED_TYPE__TYPE_DECLARATION) return null;
 		return (TypeDeclaration)eInternalContainer();
@@ -74,6 +85,7 @@ public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeDeclaration(TypeDeclaration newTypeDeclaration) {
 		if (newTypeDeclaration != eInternalContainer() || (eContainerFeatureID() != TypesPackage.DECLARED_TYPE__TYPE_DECLARATION && newTypeDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newTypeDeclaration))
@@ -95,9 +107,9 @@ public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getTypeDefinition() {
-		TypeDefinition typeDefinition = basicGetTypeDefinition();
-		return typeDefinition != null && typeDefinition.eIsProxy() ? (TypeDefinition)eResolveProxy((InternalEObject)typeDefinition) : typeDefinition;
+		return (TypeDefinition)TYPE_DEFINITION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -106,10 +118,7 @@ public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 	 * @generated
 	 */
 	public TypeDefinition basicGetTypeDefinition() {
-		// TODO: implement this method to return the 'Type Definition' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return (TypeDefinition)TYPE_DEFINITION__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -214,7 +223,7 @@ public class DeclaredTypeImpl extends TypeImpl implements DeclaredType {
 			case TypesPackage.DECLARED_TYPE__TYPE_DECLARATION:
 				return getTypeDeclaration() != null;
 			case TypesPackage.DECLARED_TYPE__TYPE_DEFINITION:
-				return basicGetTypeDefinition() != null;
+				return TYPE_DEFINITION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

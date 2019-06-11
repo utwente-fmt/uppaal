@@ -65,6 +65,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CorePackage getCorePackage() {
 		return (CorePackage)getEPackage();
 	}

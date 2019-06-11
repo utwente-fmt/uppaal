@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.muml.uppaal.expressions.ExpressionsFactory;
 import org.muml.uppaal.expressions.ExpressionsPackage;
@@ -46,6 +47,7 @@ public class IdentifierExpressionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIdentifierPropertyDescriptor(object);
+			addClockRatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +70,28 @@ public class IdentifierExpressionItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Clock Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClockRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IdentifierExpression_clockRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IdentifierExpression_clockRate_feature", "_UI_IdentifierExpression_type"),
+				 ExpressionsPackage.Literals.IDENTIFIER_EXPRESSION__CLOCK_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -121,7 +145,8 @@ public class IdentifierExpressionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_IdentifierExpression_type");
+		IdentifierExpression identifierExpression = (IdentifierExpression)object;
+		return getString("_UI_IdentifierExpression_type") + " " + identifierExpression.isClockRate();
 	}
 
 	/**
@@ -136,6 +161,9 @@ public class IdentifierExpressionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IdentifierExpression.class)) {
+			case ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ExpressionsPackage.IDENTIFIER_EXPRESSION__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -222,7 +250,12 @@ public class IdentifierExpressionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ExpressionsPackage.Literals.IDENTIFIER_EXPRESSION__INDEX,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionsPackage.Literals.IDENTIFIER_EXPRESSION__INDEX,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

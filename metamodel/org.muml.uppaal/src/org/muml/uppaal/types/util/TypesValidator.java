@@ -251,31 +251,32 @@ public class TypesValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the UniqueFieldNames constraint of '<em>Struct Type Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String STRUCT_TYPE_SPECIFICATION__UNIQUE_FIELD_NAMES__EEXPRESSION = "self.declaration->collect(variable)->isUnique(name)";
+
+	/**
 	 * Validates the UniqueFieldNames constraint of '<em>Struct Type Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateStructTypeSpecification_UniqueFieldNames(StructTypeSpecification structTypeSpecification, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "UniqueFieldNames", getObjectLabel(structTypeSpecification, context) },
-						 new Object[] { structTypeSpecification },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(TypesPackage.Literals.STRUCT_TYPE_SPECIFICATION,
+				 structTypeSpecification,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "UniqueFieldNames",
+				 STRUCT_TYPE_SPECIFICATION__UNIQUE_FIELD_NAMES__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

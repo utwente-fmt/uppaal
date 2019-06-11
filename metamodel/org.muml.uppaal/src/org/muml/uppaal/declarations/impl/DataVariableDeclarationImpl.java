@@ -67,6 +67,7 @@ public class DataVariableDeclarationImpl extends VariableDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataVariablePrefix getPrefix() {
 		return prefix;
 	}
@@ -76,6 +77,7 @@ public class DataVariableDeclarationImpl extends VariableDeclarationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefix(DataVariablePrefix newPrefix) {
 		DataVariablePrefix oldPrefix = prefix;
 		prefix = newPrefix == null ? PREFIX_EDEFAULT : newPrefix;

@@ -62,6 +62,7 @@ public class StructTypeSpecificationImpl extends TypeSpecificationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataVariableDeclaration> getDeclaration() {
 		if (declaration == null) {
 			declaration = new EObjectContainmentEList<DataVariableDeclaration>(DataVariableDeclaration.class, this, TypesPackage.STRUCT_TYPE_SPECIFICATION__DECLARATION);

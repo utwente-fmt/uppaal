@@ -60,6 +60,7 @@ public class LibraryImpl extends EObjectImpl implements Library {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getTypes() {
 		return types;
 	}
@@ -84,6 +85,7 @@ public class LibraryImpl extends EObjectImpl implements Library {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypes(PredefinedType newTypes) {
 		if (newTypes != types) {
 			NotificationChain msgs = null;

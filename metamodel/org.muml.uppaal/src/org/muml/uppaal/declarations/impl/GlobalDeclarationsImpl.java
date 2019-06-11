@@ -59,6 +59,7 @@ public class GlobalDeclarationsImpl extends DeclarationsImpl implements GlobalDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChannelPriority getChannelPriority() {
 		return channelPriority;
 	}
@@ -83,6 +84,7 @@ public class GlobalDeclarationsImpl extends DeclarationsImpl implements GlobalDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChannelPriority(ChannelPriority newChannelPriority) {
 		if (newChannelPriority != channelPriority) {
 			NotificationChain msgs = null;

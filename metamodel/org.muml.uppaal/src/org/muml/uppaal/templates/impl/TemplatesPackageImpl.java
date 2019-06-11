@@ -205,6 +205,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 		EValidator.Registry.INSTANCE.put
 			(theTemplatesPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return TemplatesValidator.INSTANCE;
 				 }
@@ -223,6 +224,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAbstractTemplate() {
 		return abstractTemplateEClass;
 	}
@@ -232,6 +234,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAbstractTemplate_Parameter() {
 		return (EReference)abstractTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -241,6 +244,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplate() {
 		return templateEClass;
 	}
@@ -250,6 +254,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplate_Declarations() {
 		return (EReference)templateEClass.getEStructuralFeatures().get(0);
 	}
@@ -259,6 +264,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplate_Location() {
 		return (EReference)templateEClass.getEStructuralFeatures().get(1);
 	}
@@ -268,6 +274,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplate_Edge() {
 		return (EReference)templateEClass.getEStructuralFeatures().get(2);
 	}
@@ -277,6 +284,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplate_Init() {
 		return (EReference)templateEClass.getEStructuralFeatures().get(3);
 	}
@@ -286,6 +294,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRedefinedTemplate() {
 		return redefinedTemplateEClass;
 	}
@@ -295,6 +304,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRedefinedTemplate_ReferredTemplate() {
 		return (EReference)redefinedTemplateEClass.getEStructuralFeatures().get(0);
 	}
@@ -304,6 +314,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRedefinedTemplate_Declaration() {
 		return (EReference)redefinedTemplateEClass.getEStructuralFeatures().get(1);
 	}
@@ -313,6 +324,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLocation() {
 		return locationEClass;
 	}
@@ -322,6 +334,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLocation_ParentTemplate() {
 		return (EReference)locationEClass.getEStructuralFeatures().get(0);
 	}
@@ -331,6 +344,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLocation_Invariant() {
 		return (EReference)locationEClass.getEStructuralFeatures().get(1);
 	}
@@ -340,6 +354,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLocation_LocationTimeKind() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(2);
 	}
@@ -349,6 +364,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEdge() {
 		return edgeEClass;
 	}
@@ -358,6 +374,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Source() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(0);
 	}
@@ -367,6 +384,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Target() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(1);
 	}
@@ -376,6 +394,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_ParentTemplate() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(2);
 	}
@@ -385,6 +404,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Guard() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(3);
 	}
@@ -394,6 +414,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Update() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(4);
 	}
@@ -403,6 +424,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Synchronization() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(5);
 	}
@@ -412,6 +434,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEdge_Selection() {
 		return (EReference)edgeEClass.getEStructuralFeatures().get(6);
 	}
@@ -421,6 +444,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSynchronization() {
 		return synchronizationEClass;
 	}
@@ -430,6 +454,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSynchronization_ChannelExpression() {
 		return (EReference)synchronizationEClass.getEStructuralFeatures().get(0);
 	}
@@ -439,6 +464,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSynchronization_Kind() {
 		return (EAttribute)synchronizationEClass.getEStructuralFeatures().get(1);
 	}
@@ -448,6 +474,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSelection() {
 		return selectionEClass;
 	}
@@ -457,6 +484,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLocationKind() {
 		return locationKindEEnum;
 	}
@@ -466,6 +494,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSynchronizationKind() {
 		return synchronizationKindEEnum;
 	}
@@ -475,6 +504,7 @@ public class TemplatesPackageImpl extends EPackageImpl implements TemplatesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplatesFactory getTemplatesFactory() {
 		return (TemplatesFactory)getEFactoryInstance();
 	}

@@ -70,6 +70,7 @@ public class SystemDeclarationsImpl extends DeclarationsImpl implements SystemDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.muml.uppaal.declarations.system.System getSystem() {
 		return system;
 	}
@@ -94,6 +95,7 @@ public class SystemDeclarationsImpl extends DeclarationsImpl implements SystemDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystem(org.muml.uppaal.declarations.system.System newSystem) {
 		if (newSystem != system) {
 			NotificationChain msgs = null;
@@ -113,6 +115,7 @@ public class SystemDeclarationsImpl extends DeclarationsImpl implements SystemDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProgressMeasure getProgressMeasure() {
 		return progressMeasure;
 	}
@@ -137,6 +140,7 @@ public class SystemDeclarationsImpl extends DeclarationsImpl implements SystemDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProgressMeasure(ProgressMeasure newProgressMeasure) {
 		if (newProgressMeasure != progressMeasure) {
 			NotificationChain msgs = null;

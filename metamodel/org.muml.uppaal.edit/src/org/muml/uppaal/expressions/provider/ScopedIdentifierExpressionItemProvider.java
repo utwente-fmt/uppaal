@@ -200,7 +200,12 @@ public class ScopedIdentifierExpressionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ExpressionsPackage.Literals.SCOPED_IDENTIFIER_EXPRESSION__SCOPE,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionsPackage.Literals.SCOPED_IDENTIFIER_EXPRESSION__SCOPE,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

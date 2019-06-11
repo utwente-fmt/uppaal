@@ -203,7 +203,12 @@ public class ScalarTypeSpecificationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TypesPackage.Literals.SCALAR_TYPE_SPECIFICATION__SIZE_EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TypesPackage.Literals.SCALAR_TYPE_SPECIFICATION__SIZE_EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -62,6 +62,7 @@ public class ChannelListImpl extends ChannelPriorityItemImpl implements ChannelL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IdentifierExpression> getChannelExpression() {
 		if (channelExpression == null) {
 			channelExpression = new EObjectContainmentEList<IdentifierExpression>(IdentifierExpression.class, this, GlobalPackage.CHANNEL_LIST__CHANNEL_EXPRESSION);

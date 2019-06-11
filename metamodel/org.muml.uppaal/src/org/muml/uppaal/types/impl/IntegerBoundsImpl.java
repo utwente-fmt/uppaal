@@ -71,6 +71,7 @@ public class IntegerBoundsImpl extends EObjectImpl implements IntegerBounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getLowerBound() {
 		return lowerBound;
 	}
@@ -95,6 +96,7 @@ public class IntegerBoundsImpl extends EObjectImpl implements IntegerBounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerBound(Expression newLowerBound) {
 		if (newLowerBound != lowerBound) {
 			NotificationChain msgs = null;
@@ -114,6 +116,7 @@ public class IntegerBoundsImpl extends EObjectImpl implements IntegerBounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getUpperBound() {
 		return upperBound;
 	}
@@ -138,6 +141,7 @@ public class IntegerBoundsImpl extends EObjectImpl implements IntegerBounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperBound(Expression newUpperBound) {
 		if (newUpperBound != upperBound) {
 			NotificationChain msgs = null;

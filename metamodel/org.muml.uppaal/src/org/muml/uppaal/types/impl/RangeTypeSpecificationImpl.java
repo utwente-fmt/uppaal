@@ -59,6 +59,7 @@ public class RangeTypeSpecificationImpl extends TypeSpecificationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerBounds getBounds() {
 		return bounds;
 	}
@@ -83,6 +84,7 @@ public class RangeTypeSpecificationImpl extends TypeSpecificationImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBounds(IntegerBounds newBounds) {
 		if (newBounds != bounds) {
 			NotificationChain msgs = null;

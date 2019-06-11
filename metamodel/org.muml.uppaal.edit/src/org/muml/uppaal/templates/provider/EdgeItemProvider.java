@@ -335,7 +335,12 @@ public class EdgeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TemplatesPackage.Literals.EDGE__GUARD,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TemplatesPackage.Literals.EDGE__GUARD,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -420,7 +425,12 @@ public class EdgeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TemplatesPackage.Literals.EDGE__UPDATE,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TemplatesPackage.Literals.EDGE__UPDATE,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

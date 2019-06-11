@@ -67,6 +67,7 @@ public class CompareExpressionImpl extends BinaryExpressionImpl implements Compa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompareOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class CompareExpressionImpl extends BinaryExpressionImpl implements Compa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(CompareOperator newOperator) {
 		CompareOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

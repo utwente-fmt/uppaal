@@ -67,6 +67,7 @@ public class ArithmeticExpressionImpl extends BinaryExpressionImpl implements Ar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArithmeticOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class ArithmeticExpressionImpl extends BinaryExpressionImpl implements Ar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(ArithmeticOperator newOperator) {
 		ArithmeticOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

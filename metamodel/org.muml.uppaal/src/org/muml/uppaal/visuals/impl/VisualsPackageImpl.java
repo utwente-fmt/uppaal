@@ -180,6 +180,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getColoredElement() {
 		return coloredElementEClass;
 	}
@@ -189,6 +190,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColoredElement_Color() {
 		return (EAttribute)coloredElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -198,6 +200,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColoredElement_ColorCode() {
 		return (EAttribute)coloredElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -207,6 +210,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlanarElement() {
 		return planarElementEClass;
 	}
@@ -216,6 +220,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlanarElement_Position() {
 		return (EReference)planarElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -225,6 +230,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLinearElement() {
 		return linearElementEClass;
 	}
@@ -234,6 +240,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLinearElement_BendPoint() {
 		return (EReference)linearElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -243,6 +250,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPoint() {
 		return pointEClass;
 	}
@@ -252,6 +260,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPoint_X() {
 		return (EAttribute)pointEClass.getEStructuralFeatures().get(0);
 	}
@@ -261,6 +270,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPoint_Y() {
 		return (EAttribute)pointEClass.getEStructuralFeatures().get(1);
 	}
@@ -270,6 +280,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getColorKind() {
 		return colorKindEEnum;
 	}
@@ -279,6 +290,7 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisualsFactory getVisualsFactory() {
 		return (VisualsFactory)getEFactoryInstance();
 	}
@@ -361,8 +373,8 @@ public class VisualsPackageImpl extends EPackageImpl implements VisualsPackage {
 		initEReference(getLinearElement_BendPoint(), this.getPoint(), null, "bendPoint", null, 0, -1, LinearElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPoint_X(), ecorePackage.getEInt(), "x", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPoint_Y(), ecorePackage.getEInt(), "y", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPoint_X(), ecorePackage.getEString(), "x", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPoint_Y(), ecorePackage.getEString(), "y", "0", 1, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorKindEEnum, ColorKind.class, "ColorKind");

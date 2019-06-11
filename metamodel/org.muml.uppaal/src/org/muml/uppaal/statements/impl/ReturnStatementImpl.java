@@ -59,6 +59,7 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getReturnExpression() {
 		return returnExpression;
 	}
@@ -83,6 +84,7 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnExpression(Expression newReturnExpression) {
 		if (newReturnExpression != returnExpression) {
 			NotificationChain msgs = null;

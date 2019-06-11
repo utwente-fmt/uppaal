@@ -222,7 +222,12 @@ public class FunctionCallExpressionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ExpressionsPackage.Literals.FUNCTION_CALL_EXPRESSION__ARGUMENT,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExpressionsPackage.Literals.FUNCTION_CALL_EXPRESSION__ARGUMENT,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

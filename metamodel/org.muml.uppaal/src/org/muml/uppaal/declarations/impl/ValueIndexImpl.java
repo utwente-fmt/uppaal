@@ -59,6 +59,7 @@ public class ValueIndexImpl extends IndexImpl implements ValueIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getSizeExpression() {
 		return sizeExpression;
 	}
@@ -83,6 +84,7 @@ public class ValueIndexImpl extends IndexImpl implements ValueIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSizeExpression(Expression newSizeExpression) {
 		if (newSizeExpression != sizeExpression) {
 			NotificationChain msgs = null;

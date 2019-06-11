@@ -82,6 +82,7 @@ public class ParameterImpl extends EObjectImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclaration getVariableDeclaration() {
 		return variableDeclaration;
 	}
@@ -106,6 +107,7 @@ public class ParameterImpl extends EObjectImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariableDeclaration(VariableDeclaration newVariableDeclaration) {
 		if (newVariableDeclaration != variableDeclaration) {
 			NotificationChain msgs = null;
@@ -125,6 +127,7 @@ public class ParameterImpl extends EObjectImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CallType getCallType() {
 		return callType;
 	}
@@ -134,6 +137,7 @@ public class ParameterImpl extends EObjectImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCallType(CallType newCallType) {
 		CallType oldCallType = callType;
 		callType = newCallType == null ? CALL_TYPE_EDEFAULT : newCallType;

@@ -229,6 +229,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		EValidator.Registry.INSTANCE.put
 			(theTypesPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return TypesValidator.INSTANCE;
 				 }
@@ -247,6 +248,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -256,6 +258,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_Index() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(0);
 	}
@@ -265,6 +268,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getType_BaseType() {
 		return (EAttribute)typeEClass.getEStructuralFeatures().get(1);
 	}
@@ -274,6 +278,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_TypeSpecification() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(2);
 	}
@@ -283,6 +288,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPredefinedType() {
 		return predefinedTypeEClass;
 	}
@@ -292,6 +298,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPredefinedType_Type() {
 		return (EAttribute)predefinedTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -301,6 +308,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeclaredType() {
 		return declaredTypeEClass;
 	}
@@ -310,6 +318,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeclaredType_TypeDeclaration() {
 		return (EReference)declaredTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -319,6 +328,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeclaredType_TypeDefinition() {
 		return (EReference)declaredTypeEClass.getEStructuralFeatures().get(1);
 	}
@@ -328,6 +338,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeDefinition() {
 		return typeDefinitionEClass;
 	}
@@ -337,6 +348,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTypeDefinition_BaseType() {
 		return (EAttribute)typeDefinitionEClass.getEStructuralFeatures().get(0);
 	}
@@ -346,6 +358,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDefinition_TypeSpecification() {
 		return (EReference)typeDefinitionEClass.getEStructuralFeatures().get(1);
 	}
@@ -355,6 +368,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeReference() {
 		return typeReferenceEClass;
 	}
@@ -364,6 +378,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeReference_ReferredType() {
 		return (EReference)typeReferenceEClass.getEStructuralFeatures().get(0);
 	}
@@ -373,6 +388,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeSpecification() {
 		return typeSpecificationEClass;
 	}
@@ -382,6 +398,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScalarTypeSpecification() {
 		return scalarTypeSpecificationEClass;
 	}
@@ -391,6 +408,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScalarTypeSpecification_SizeExpression() {
 		return (EReference)scalarTypeSpecificationEClass.getEStructuralFeatures().get(0);
 	}
@@ -400,6 +418,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStructTypeSpecification() {
 		return structTypeSpecificationEClass;
 	}
@@ -409,6 +428,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStructTypeSpecification_Declaration() {
 		return (EReference)structTypeSpecificationEClass.getEStructuralFeatures().get(0);
 	}
@@ -418,6 +438,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRangeTypeSpecification() {
 		return rangeTypeSpecificationEClass;
 	}
@@ -427,6 +448,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRangeTypeSpecification_Bounds() {
 		return (EReference)rangeTypeSpecificationEClass.getEStructuralFeatures().get(0);
 	}
@@ -436,6 +458,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerBounds() {
 		return integerBoundsEClass;
 	}
@@ -445,6 +468,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIntegerBounds_LowerBound() {
 		return (EReference)integerBoundsEClass.getEStructuralFeatures().get(0);
 	}
@@ -454,6 +478,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIntegerBounds_UpperBound() {
 		return (EReference)integerBoundsEClass.getEStructuralFeatures().get(1);
 	}
@@ -463,6 +488,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLibrary() {
 		return libraryEClass;
 	}
@@ -472,6 +498,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLibrary_Types() {
 		return (EReference)libraryEClass.getEStructuralFeatures().get(0);
 	}
@@ -481,6 +508,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getBuiltInType() {
 		return builtInTypeEEnum;
 	}
@@ -490,6 +518,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypesFactory getTypesFactory() {
 		return (TypesFactory)getEFactoryInstance();
 	}
@@ -643,10 +672,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		addEEnumLiteral(builtInTypeEEnum, BuiltInType.VOID);
 
 		// Create annotations
-		// http://www.eclipse.org/emf/2002/Ecore/OCL
-		createOCLAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
 	}
@@ -659,6 +688,14 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 */
 	protected void createEcoreAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
 		addAnnotation
 		  (structTypeSpecificationEClass,
 		   source,
@@ -692,6 +729,32 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		   source,
 		   new String[] {
 			   "derivation", "if self.typeDeclaration.oclIsUndefined()\r\nthen null\r\nelse self.typeDeclaration.typeDefinition\r\nendif"
+		   });
+		addAnnotation
+		  (getTypeDefinition_BaseType(),
+		   source,
+		   new String[] {
+			   "derivation", "if self.oclIsKindOf(TypeReference)\r\nthen \r\n\tif self.oclAsType(TypeReference).referredType.oclIsUndefined()\r\n\tthen null\r\n\telse self.oclAsType(TypeReference).referredType.baseType\r\n\tendif\r\nelse \r\n\tif self.oclIsKindOf(ScalarTypeSpecification) or self.oclIsKindOf(RangeTypeSpecification)\r\n\tthen BuiltInType::INT\r\n\telse null\r\n\tendif\r\nendif"
+		   });
+		addAnnotation
+		  (getTypeDefinition_TypeSpecification(),
+		   source,
+		   new String[] {
+			   "derivation", "if (self.oclIsKindOf(TypeReference))\r\nthen self.oclAsType(TypeReference).referredType.typeSpecification\r\nelse\r\n\tif (self.oclIsKindOf(TypeSpecification))\r\n\tthen self.oclAsType(TypeSpecification)\r\n\telse null\r\n\tendif\r\nendif"
+		   });
+		addAnnotation
+		  (getTypeDefinition_TypeSpecification(),
+		   new boolean[] { true },
+		   "http://www.eclipse.org/emf/2002/Ecore/OCL",
+		   new String[] {
+			   "body", "if (self.oclIsKindOf(DeclaredType))\r\nthen self.oclAsType(DeclaredType).typeDefinition.typeSpecification\r\nelse null\r\nendif"
+		   });
+		addAnnotation
+		  (getTypeDefinition_TypeSpecification(),
+		   new boolean[] { true, true },
+		   "http://www.eclipse.org/emf/2002/Ecore/OCL",
+		   new String[] {
+			   "body", "if (self.oclIsKindOf(DeclaredType))\r\nthen self.oclAsType(DeclaredType).typeDefinition.typeSpecification\r\nelse null\r\nendif"
 		   });
 		addAnnotation
 		  (structTypeSpecificationEClass,

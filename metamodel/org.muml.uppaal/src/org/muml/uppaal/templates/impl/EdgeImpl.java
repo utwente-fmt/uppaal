@@ -194,6 +194,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -203,6 +204,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		String oldComment = comment;
 		comment = newComment;
@@ -215,6 +217,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColorKind getColor() {
 		return color;
 	}
@@ -224,6 +227,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColor(ColorKind newColor) {
 		ColorKind oldColor = color;
 		color = newColor == null ? COLOR_EDEFAULT : newColor;
@@ -236,6 +240,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColorCode() {
 		return colorCode;
 	}
@@ -245,6 +250,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColorCode(String newColorCode) {
 		String oldColorCode = colorCode;
 		colorCode = newColorCode;
@@ -257,6 +263,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -283,6 +290,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Location newSource) {
 		Location oldSource = source;
 		source = newSource;
@@ -295,6 +303,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Location getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -321,6 +330,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Location newTarget) {
 		Location oldTarget = target;
 		target = newTarget;
@@ -333,6 +343,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Template getParentTemplate() {
 		if (eContainerFeatureID() != TemplatesPackage.EDGE__PARENT_TEMPLATE) return null;
 		return (Template)eInternalContainer();
@@ -353,6 +364,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentTemplate(Template newParentTemplate) {
 		if (newParentTemplate != eInternalContainer() || (eContainerFeatureID() != TemplatesPackage.EDGE__PARENT_TEMPLATE && newParentTemplate != null)) {
 			if (EcoreUtil.isAncestor(this, newParentTemplate))
@@ -374,6 +386,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getGuard() {
 		return guard;
 	}
@@ -398,6 +411,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuard(Expression newGuard) {
 		if (newGuard != guard) {
 			NotificationChain msgs = null;
@@ -417,6 +431,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getUpdate() {
 		if (update == null) {
 			update = new EObjectContainmentEList<Expression>(Expression.class, this, TemplatesPackage.EDGE__UPDATE);
@@ -429,6 +444,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Synchronization getSynchronization() {
 		return synchronization;
 	}
@@ -453,6 +469,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSynchronization(Synchronization newSynchronization) {
 		if (newSynchronization != synchronization) {
 			NotificationChain msgs = null;
@@ -472,6 +489,7 @@ public class EdgeImpl extends LinearElementImpl implements Edge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Selection> getSelection() {
 		if (selection == null) {
 			selection = new EObjectContainmentEList<Selection>(Selection.class, this, TemplatesPackage.EDGE__SELECTION);

@@ -99,6 +99,7 @@ public class VisualsFactoryImpl extends EFactoryImpl implements VisualsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Point createPoint() {
 		PointImpl point = new PointImpl();
 		return point;
@@ -129,6 +130,7 @@ public class VisualsFactoryImpl extends EFactoryImpl implements VisualsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisualsPackage getVisualsPackage() {
 		return (VisualsPackage)getEPackage();
 	}

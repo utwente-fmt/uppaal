@@ -59,6 +59,7 @@ public class TypeIndexImpl extends IndexImpl implements TypeIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getTypeDefinition() {
 		return typeDefinition;
 	}
@@ -83,6 +84,7 @@ public class TypeIndexImpl extends IndexImpl implements TypeIndex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeDefinition(TypeDefinition newTypeDefinition) {
 		if (newTypeDefinition != typeDefinition) {
 			NotificationChain msgs = null;

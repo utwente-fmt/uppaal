@@ -67,6 +67,7 @@ public class AssignmentExpressionImpl extends BinaryExpressionImpl implements As
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class AssignmentExpressionImpl extends BinaryExpressionImpl implements As
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(AssignmentOperator newOperator) {
 		AssignmentOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

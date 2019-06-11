@@ -314,7 +314,12 @@ public class LocationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TemplatesPackage.Literals.LOCATION__INVARIANT,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TemplatesPackage.Literals.LOCATION__INVARIANT,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

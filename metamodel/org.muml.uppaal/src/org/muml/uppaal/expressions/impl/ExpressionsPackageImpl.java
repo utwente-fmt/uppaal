@@ -35,9 +35,7 @@ import org.muml.uppaal.expressions.ExpressionsFactory;
 import org.muml.uppaal.expressions.ExpressionsPackage;
 import org.muml.uppaal.expressions.FunctionCallExpression;
 import org.muml.uppaal.expressions.IdentifierExpression;
-import org.muml.uppaal.expressions.IncrementDecrementExpression;
 import org.muml.uppaal.expressions.IncrementDecrementOperator;
-import org.muml.uppaal.expressions.IncrementDecrementPosition;
 import org.muml.uppaal.expressions.LiteralExpression;
 import org.muml.uppaal.expressions.LogicalExpression;
 import org.muml.uppaal.expressions.LogicalOperator;
@@ -46,6 +44,8 @@ import org.muml.uppaal.expressions.MinMaxOperator;
 import org.muml.uppaal.expressions.MinusExpression;
 import org.muml.uppaal.expressions.NegationExpression;
 import org.muml.uppaal.expressions.PlusExpression;
+import org.muml.uppaal.expressions.PostIncrementDecrementExpression;
+import org.muml.uppaal.expressions.PreIncrementDecrementExpression;
 import org.muml.uppaal.expressions.QuantificationExpression;
 import org.muml.uppaal.expressions.Quantifier;
 import org.muml.uppaal.expressions.ScopedIdentifierExpression;
@@ -177,7 +177,14 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass incrementDecrementExpressionEClass = null;
+	private EClass preIncrementDecrementExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass postIncrementDecrementExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,13 +248,6 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * @generated
 	 */
 	private EEnum incrementDecrementOperatorEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum incrementDecrementPositionEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,6 +365,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		EValidator.Registry.INSTANCE.put
 			(theExpressionsPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return ExpressionsValidator.INSTANCE;
 				 }
@@ -383,6 +384,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -392,6 +394,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNegationExpression() {
 		return negationExpressionEClass;
 	}
@@ -401,6 +404,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNegationExpression_NegatedExpression() {
 		return (EReference)negationExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -410,6 +414,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlusExpression() {
 		return plusExpressionEClass;
 	}
@@ -419,6 +424,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlusExpression_ConfirmedExpression() {
 		return (EReference)plusExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -428,6 +434,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMinusExpression() {
 		return minusExpressionEClass;
 	}
@@ -437,6 +444,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMinusExpression_InvertedExpression() {
 		return (EReference)minusExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -446,6 +454,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBinaryExpression() {
 		return binaryExpressionEClass;
 	}
@@ -455,6 +464,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinaryExpression_FirstExpr() {
 		return (EReference)binaryExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -464,6 +474,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinaryExpression_SecondExpr() {
 		return (EReference)binaryExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -473,6 +484,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignmentExpression() {
 		return assignmentExpressionEClass;
 	}
@@ -482,6 +494,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssignmentExpression_Operator() {
 		return (EAttribute)assignmentExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -491,6 +504,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIdentifierExpression() {
 		return identifierExpressionEClass;
 	}
@@ -500,6 +514,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIdentifierExpression_Identifier() {
 		return (EReference)identifierExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -509,6 +524,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIdentifierExpression_Index() {
 		return (EReference)identifierExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -518,6 +534,17 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EAttribute getIdentifierExpression_ClockRate() {
+		return (EAttribute)identifierExpressionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLiteralExpression() {
 		return literalExpressionEClass;
 	}
@@ -527,6 +554,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLiteralExpression_Text() {
 		return (EAttribute)literalExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -536,6 +564,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArithmeticExpression() {
 		return arithmeticExpressionEClass;
 	}
@@ -545,6 +574,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArithmeticExpression_Operator() {
 		return (EAttribute)arithmeticExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -554,6 +584,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLogicalExpression() {
 		return logicalExpressionEClass;
 	}
@@ -563,6 +594,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLogicalExpression_Operator() {
 		return (EAttribute)logicalExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -572,6 +604,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFunctionCallExpression() {
 		return functionCallExpressionEClass;
 	}
@@ -581,6 +614,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunctionCallExpression_Function() {
 		return (EReference)functionCallExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -590,6 +624,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunctionCallExpression_Argument() {
 		return (EReference)functionCallExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -599,6 +634,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompareExpression() {
 		return compareExpressionEClass;
 	}
@@ -608,6 +644,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCompareExpression_Operator() {
 		return (EAttribute)compareExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -617,6 +654,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConditionExpression() {
 		return conditionExpressionEClass;
 	}
@@ -626,6 +664,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionExpression_IfExpression() {
 		return (EReference)conditionExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -635,6 +674,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionExpression_ThenExpression() {
 		return (EReference)conditionExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -644,6 +684,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConditionExpression_ElseExpression() {
 		return (EReference)conditionExpressionEClass.getEStructuralFeatures().get(2);
 	}
@@ -653,6 +694,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScopedIdentifierExpression() {
 		return scopedIdentifierExpressionEClass;
 	}
@@ -662,6 +704,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScopedIdentifierExpression_Scope() {
 		return (EReference)scopedIdentifierExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -671,6 +714,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScopedIdentifierExpression_Identifier() {
 		return (EReference)scopedIdentifierExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -680,6 +724,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getQuantificationExpression() {
 		return quantificationExpressionEClass;
 	}
@@ -689,6 +734,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getQuantificationExpression_Quantifier() {
 		return (EAttribute)quantificationExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -698,6 +744,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getQuantificationExpression_Expression() {
 		return (EReference)quantificationExpressionEClass.getEStructuralFeatures().get(1);
 	}
@@ -707,8 +754,9 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIncrementDecrementExpression() {
-		return incrementDecrementExpressionEClass;
+	@Override
+	public EClass getPreIncrementDecrementExpression() {
+		return preIncrementDecrementExpressionEClass;
 	}
 
 	/**
@@ -716,8 +764,9 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIncrementDecrementExpression_Expression() {
-		return (EReference)incrementDecrementExpressionEClass.getEStructuralFeatures().get(0);
+	@Override
+	public EReference getPreIncrementDecrementExpression_Expression() {
+		return (EReference)preIncrementDecrementExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -725,8 +774,9 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIncrementDecrementExpression_Position() {
-		return (EAttribute)incrementDecrementExpressionEClass.getEStructuralFeatures().get(1);
+	@Override
+	public EAttribute getPreIncrementDecrementExpression_Operator() {
+		return (EAttribute)preIncrementDecrementExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -734,8 +784,9 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIncrementDecrementExpression_Operator() {
-		return (EAttribute)incrementDecrementExpressionEClass.getEStructuralFeatures().get(2);
+	@Override
+	public EClass getPostIncrementDecrementExpression() {
+		return postIncrementDecrementExpressionEClass;
 	}
 
 	/**
@@ -743,6 +794,27 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EReference getPostIncrementDecrementExpression_Expression() {
+		return (EReference)postIncrementDecrementExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPostIncrementDecrementExpression_Operator() {
+		return (EAttribute)postIncrementDecrementExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getBitShiftExpression() {
 		return bitShiftExpressionEClass;
 	}
@@ -752,6 +824,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBitShiftExpression_Operator() {
 		return (EAttribute)bitShiftExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -761,6 +834,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMinMaxExpression() {
 		return minMaxExpressionEClass;
 	}
@@ -770,6 +844,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMinMaxExpression_Operator() {
 		return (EAttribute)minMaxExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -779,6 +854,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBitwiseExpression() {
 		return bitwiseExpressionEClass;
 	}
@@ -788,6 +864,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBitwiseExpression_Operator() {
 		return (EAttribute)bitwiseExpressionEClass.getEStructuralFeatures().get(0);
 	}
@@ -797,6 +874,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getAssignmentOperator() {
 		return assignmentOperatorEEnum;
 	}
@@ -806,6 +884,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getArithmeticOperator() {
 		return arithmeticOperatorEEnum;
 	}
@@ -815,6 +894,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLogicalOperator() {
 		return logicalOperatorEEnum;
 	}
@@ -824,6 +904,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCompareOperator() {
 		return compareOperatorEEnum;
 	}
@@ -833,6 +914,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getQuantifier() {
 		return quantifierEEnum;
 	}
@@ -842,6 +924,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getIncrementDecrementOperator() {
 		return incrementDecrementOperatorEEnum;
 	}
@@ -851,15 +934,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getIncrementDecrementPosition() {
-		return incrementDecrementPositionEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EEnum getBitShiftOperator() {
 		return bitShiftOperatorEEnum;
 	}
@@ -869,6 +944,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMinMaxOperator() {
 		return minMaxOperatorEEnum;
 	}
@@ -878,6 +954,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getBitwiseOperator() {
 		return bitwiseOperatorEEnum;
 	}
@@ -887,6 +964,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionsFactory getExpressionsFactory() {
 		return (ExpressionsFactory)getEFactoryInstance();
 	}
@@ -931,6 +1009,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		identifierExpressionEClass = createEClass(IDENTIFIER_EXPRESSION);
 		createEReference(identifierExpressionEClass, IDENTIFIER_EXPRESSION__IDENTIFIER);
 		createEReference(identifierExpressionEClass, IDENTIFIER_EXPRESSION__INDEX);
+		createEAttribute(identifierExpressionEClass, IDENTIFIER_EXPRESSION__CLOCK_RATE);
 
 		literalExpressionEClass = createEClass(LITERAL_EXPRESSION);
 		createEAttribute(literalExpressionEClass, LITERAL_EXPRESSION__TEXT);
@@ -961,10 +1040,13 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		createEAttribute(quantificationExpressionEClass, QUANTIFICATION_EXPRESSION__QUANTIFIER);
 		createEReference(quantificationExpressionEClass, QUANTIFICATION_EXPRESSION__EXPRESSION);
 
-		incrementDecrementExpressionEClass = createEClass(INCREMENT_DECREMENT_EXPRESSION);
-		createEReference(incrementDecrementExpressionEClass, INCREMENT_DECREMENT_EXPRESSION__EXPRESSION);
-		createEAttribute(incrementDecrementExpressionEClass, INCREMENT_DECREMENT_EXPRESSION__POSITION);
-		createEAttribute(incrementDecrementExpressionEClass, INCREMENT_DECREMENT_EXPRESSION__OPERATOR);
+		postIncrementDecrementExpressionEClass = createEClass(POST_INCREMENT_DECREMENT_EXPRESSION);
+		createEReference(postIncrementDecrementExpressionEClass, POST_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION);
+		createEAttribute(postIncrementDecrementExpressionEClass, POST_INCREMENT_DECREMENT_EXPRESSION__OPERATOR);
+
+		preIncrementDecrementExpressionEClass = createEClass(PRE_INCREMENT_DECREMENT_EXPRESSION);
+		createEReference(preIncrementDecrementExpressionEClass, PRE_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION);
+		createEAttribute(preIncrementDecrementExpressionEClass, PRE_INCREMENT_DECREMENT_EXPRESSION__OPERATOR);
 
 		bitShiftExpressionEClass = createEClass(BIT_SHIFT_EXPRESSION);
 		createEAttribute(bitShiftExpressionEClass, BIT_SHIFT_EXPRESSION__OPERATOR);
@@ -982,7 +1064,6 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		compareOperatorEEnum = createEEnum(COMPARE_OPERATOR);
 		quantifierEEnum = createEEnum(QUANTIFIER);
 		incrementDecrementOperatorEEnum = createEEnum(INCREMENT_DECREMENT_OPERATOR);
-		incrementDecrementPositionEEnum = createEEnum(INCREMENT_DECREMENT_POSITION);
 		bitShiftOperatorEEnum = createEEnum(BIT_SHIFT_OPERATOR);
 		minMaxOperatorEEnum = createEEnum(MIN_MAX_OPERATOR);
 		bitwiseOperatorEEnum = createEEnum(BITWISE_OPERATOR);
@@ -1035,7 +1116,8 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		scopedIdentifierExpressionEClass.getESuperTypes().add(this.getExpression());
 		quantificationExpressionEClass.getESuperTypes().add(this.getExpression());
 		quantificationExpressionEClass.getESuperTypes().add(theDeclarationsPackage.getVariableContainer());
-		incrementDecrementExpressionEClass.getESuperTypes().add(this.getExpression());
+		postIncrementDecrementExpressionEClass.getESuperTypes().add(this.getExpression());
+		preIncrementDecrementExpressionEClass.getESuperTypes().add(this.getExpression());
 		bitShiftExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
 		minMaxExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
 		bitwiseExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
@@ -1062,6 +1144,7 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEClass(identifierExpressionEClass, IdentifierExpression.class, "IdentifierExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIdentifierExpression_Identifier(), theCorePackage.getNamedElement(), null, "identifier", null, 1, 1, IdentifierExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIdentifierExpression_Index(), this.getExpression(), null, "index", null, 0, -1, IdentifierExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIdentifierExpression_ClockRate(), ecorePackage.getEBoolean(), "clockRate", "false", 1, 1, IdentifierExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalExpressionEClass, LiteralExpression.class, "LiteralExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLiteralExpression_Text(), ecorePackage.getEString(), "text", null, 1, 1, LiteralExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1092,10 +1175,13 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEAttribute(getQuantificationExpression_Quantifier(), this.getQuantifier(), "quantifier", null, 1, 1, QuantificationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuantificationExpression_Expression(), this.getExpression(), null, "expression", null, 1, 1, QuantificationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(incrementDecrementExpressionEClass, IncrementDecrementExpression.class, "IncrementDecrementExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIncrementDecrementExpression_Expression(), this.getExpression(), null, "expression", null, 1, 1, IncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIncrementDecrementExpression_Position(), this.getIncrementDecrementPosition(), "position", null, 1, 1, IncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIncrementDecrementExpression_Operator(), this.getIncrementDecrementOperator(), "operator", null, 1, 1, IncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(postIncrementDecrementExpressionEClass, PostIncrementDecrementExpression.class, "PostIncrementDecrementExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPostIncrementDecrementExpression_Expression(), this.getExpression(), null, "expression", null, 1, 1, PostIncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPostIncrementDecrementExpression_Operator(), this.getIncrementDecrementOperator(), "operator", null, 1, 1, PostIncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(preIncrementDecrementExpressionEClass, PreIncrementDecrementExpression.class, "PreIncrementDecrementExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPreIncrementDecrementExpression_Expression(), this.getExpression(), null, "expression", null, 1, 1, PreIncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPreIncrementDecrementExpression_Operator(), this.getIncrementDecrementOperator(), "operator", null, 1, 1, PreIncrementDecrementExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bitShiftExpressionEClass, BitShiftExpression.class, "BitShiftExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBitShiftExpression_Operator(), this.getBitShiftOperator(), "operator", null, 1, 1, BitShiftExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1147,10 +1233,6 @@ public class ExpressionsPackageImpl extends EPackageImpl implements ExpressionsP
 		initEEnum(incrementDecrementOperatorEEnum, IncrementDecrementOperator.class, "IncrementDecrementOperator");
 		addEEnumLiteral(incrementDecrementOperatorEEnum, IncrementDecrementOperator.INCREMENT);
 		addEEnumLiteral(incrementDecrementOperatorEEnum, IncrementDecrementOperator.DECREMENT);
-
-		initEEnum(incrementDecrementPositionEEnum, IncrementDecrementPosition.class, "IncrementDecrementPosition");
-		addEEnumLiteral(incrementDecrementPositionEEnum, IncrementDecrementPosition.PRE);
-		addEEnumLiteral(incrementDecrementPositionEEnum, IncrementDecrementPosition.POST);
 
 		initEEnum(bitShiftOperatorEEnum, BitShiftOperator.class, "BitShiftOperator");
 		addEEnumLiteral(bitShiftOperatorEEnum, BitShiftOperator.LEFT);

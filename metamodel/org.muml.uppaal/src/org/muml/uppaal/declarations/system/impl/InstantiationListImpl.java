@@ -60,6 +60,7 @@ public class InstantiationListImpl extends EObjectImpl implements InstantiationL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AbstractTemplate> getTemplate() {
 		if (template == null) {
 			template = new EObjectResolvingEList<AbstractTemplate>(AbstractTemplate.class, this, SystemPackage.INSTANTIATION_LIST__TEMPLATE);

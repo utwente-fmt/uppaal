@@ -122,32 +122,41 @@ public class GlobalValidator extends EObjectValidator {
 	}
 
 	/**
+	 * The cached validation expression for the AtMostOneDefaultItem constraint of '<em>Channel Priority</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CHANNEL_PRIORITY__AT_MOST_ONE_DEFAULT_ITEM__EEXPRESSION = "self.item->select(oclIsKindOf(DefaultChannelPriority))->size() <= 1";
+
+	/**
 	 * Validates the AtMostOneDefaultItem constraint of '<em>Channel Priority</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateChannelPriority_AtMostOneDefaultItem(ChannelPriority channelPriority, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "AtMostOneDefaultItem", getObjectLabel(channelPriority, context) },
-						 new Object[] { channelPriority },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(GlobalPackage.Literals.CHANNEL_PRIORITY,
+				 channelPriority,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "AtMostOneDefaultItem",
+				 CHANNEL_PRIORITY__AT_MOST_ONE_DEFAULT_ITEM__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
+
+	/**
+	 * The cached validation expression for the EachChannelContainedAtMostOnce constraint of '<em>Channel Priority</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String CHANNEL_PRIORITY__EACH_CHANNEL_CONTAINED_AT_MOST_ONCE__EEXPRESSION = "self.item->select(oclIsKindOf(ChannelList)).oclAsType(ChannelList)->collect(channelExpression)->isUnique(variable)";
 
 	/**
 	 * Validates the EachChannelContainedAtMostOnce constraint of '<em>Channel Priority</em>'.
@@ -156,25 +165,18 @@ public class GlobalValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateChannelPriority_EachChannelContainedAtMostOnce(ChannelPriority channelPriority, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "EachChannelContainedAtMostOnce", getObjectLabel(channelPriority, context) },
-						 new Object[] { channelPriority },
-						 context));
-			}
-			return false;
-		}
-		return true;
+		return
+			validate
+				(GlobalPackage.Literals.CHANNEL_PRIORITY,
+				 channelPriority,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "EachChannelContainedAtMostOnce",
+				 CHANNEL_PRIORITY__EACH_CHANNEL_CONTAINED_AT_MOST_ONCE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

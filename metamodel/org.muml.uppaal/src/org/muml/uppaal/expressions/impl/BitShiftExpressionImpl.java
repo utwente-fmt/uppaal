@@ -67,6 +67,7 @@ public class BitShiftExpressionImpl extends BinaryExpressionImpl implements BitS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BitShiftOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class BitShiftExpressionImpl extends BinaryExpressionImpl implements BitS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(BitShiftOperator newOperator) {
 		BitShiftOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

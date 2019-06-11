@@ -209,7 +209,12 @@ public class TemplateDeclarationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemPackage.Literals.TEMPLATE_DECLARATION__ARGUMENT,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SystemPackage.Literals.TEMPLATE_DECLARATION__ARGUMENT,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

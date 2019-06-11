@@ -62,6 +62,7 @@ public class SystemImpl extends EObjectImpl implements org.muml.uppaal.declarati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InstantiationList> getInstantiationList() {
 		if (instantiationList == null) {
 			instantiationList = new EObjectContainmentEList<InstantiationList>(InstantiationList.class, this, SystemPackage.SYSTEM__INSTANTIATION_LIST);

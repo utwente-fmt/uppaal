@@ -63,6 +63,7 @@ public abstract class DeclarationsImpl extends EObjectImpl implements Declaratio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Declaration> getDeclaration() {
 		if (declaration == null) {
 			declaration = new EObjectContainmentEList<Declaration>(Declaration.class, this, DeclarationsPackage.DECLARATIONS__DECLARATION);

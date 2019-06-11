@@ -198,7 +198,12 @@ public class ValueIndexItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(DeclarationsPackage.Literals.VALUE_INDEX__SIZE_EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DeclarationsPackage.Literals.VALUE_INDEX__SIZE_EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

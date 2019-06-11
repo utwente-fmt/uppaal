@@ -128,6 +128,11 @@
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="types" nsURI="http://www.muml.org/uppaal/types/1.0.0" nsPrefix="types">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Provides support for built-in and user-defined types."/>
     </eAnnotations>
@@ -202,12 +207,25 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseType" eType="#//types/BuiltInType"
           changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="if self.oclIsKindOf(TypeReference)&#xD;&#xA;then &#xD;&#xA;&#x9;if self.oclAsType(TypeReference).referredType.oclIsUndefined()&#xD;&#xA;&#x9;then null&#xD;&#xA;&#x9;else self.oclAsType(TypeReference).referredType.baseType&#xD;&#xA;&#x9;endif&#xD;&#xA;else &#xD;&#xA;&#x9;if self.oclIsKindOf(ScalarTypeSpecification) or self.oclIsKindOf(RangeTypeSpecification)&#xD;&#xA;&#x9;then BuiltInType::INT&#xD;&#xA;&#x9;else null&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        </eAnnotations>
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The built-in base type this type definition relies on. Can be 'null' in case of a 'struct' type definition involved."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="typeSpecification" eType="#//types/TypeSpecification"
-          changeable="false" volatile="true" transient="true" derived="true"/>
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+              <details key="body" value="if (self.oclIsKindOf(DeclaredType))&#xD;&#xA;then self.oclAsType(DeclaredType).typeDefinition.typeSpecification&#xD;&#xA;else null&#xD;&#xA;endif"/>
+            </eAnnotations>
+            <details key="body" value="if (self.oclIsKindOf(DeclaredType))&#xD;&#xA;then self.oclAsType(DeclaredType).typeDefinition.typeSpecification&#xD;&#xA;else null&#xD;&#xA;endif"/>
+          </eAnnotations>
+          <details key="derivation" value="if (self.oclIsKindOf(TypeReference))&#xD;&#xA;then self.oclAsType(TypeReference).referredType.typeSpecification&#xD;&#xA;else&#xD;&#xA;&#x9;if (self.oclIsKindOf(TypeSpecification))&#xD;&#xA;&#x9;then self.oclAsType(TypeSpecification)&#xD;&#xA;&#x9;else null&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TypeReference" eSuperTypes="#//types/TypeDefinition">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -691,6 +709,10 @@
       <eClassifiers xsi:type="ecore:EClass" name="ChannelPriority">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A priority ordering for synchronization channels."/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="AtMostOneDefaultItem" value="self.item->select(oclIsKindOf(DefaultChannelPriority))->size() &lt;= 1"/>
+          <details key="EachChannelContainedAtMostOnce" value="self.item->select(oclIsKindOf(ChannelList)).oclAsType(ChannelList)->collect(channelExpression)->isUnique(variable)"/>
         </eAnnotations>
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
           <details key="constraints" value="AtMostOneDefaultItem EachChannelContainedAtMostOnce"/>
@@ -1337,6 +1359,13 @@
           <details key="documentation" value="A set of expressions that refer to the array indexes of the variable."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="clockRate" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Specifies whether the declared synchronization channels use broadcast."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LiteralExpression" eSuperTypes="#//expressions/Expression">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1497,7 +1526,8 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IncrementDecrementExpression" eSuperTypes="#//expressions/Expression">
+    <eClassifiers xsi:type="ecore:EClass" name="PostIncrementDecrementExpression"
+        eSuperTypes="#//expressions/Expression">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An expression describing increment (++) or decrement (---) of an integer-based expression. "/>
       </eAnnotations>
@@ -1507,10 +1537,21 @@
           <details key="documentation" value="The expression to be incremented or decremented."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
-          eType="#//expressions/IncrementDecrementPosition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+          eType="#//expressions/IncrementDecrementOperator">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Specifies pre- or post-evaluation."/>
+          <details key="documentation" value="Specifies increment or decrement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PreIncrementDecrementExpression" eSuperTypes="#//expressions/Expression">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An expression describing increment (++) or decrement (---) of an integer-based expression. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+          eType="#//expressions/Expression" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The expression to be incremented or decremented."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
@@ -1526,13 +1567,6 @@
       </eAnnotations>
       <eLiterals name="INCREMENT" literal="++"/>
       <eLiterals name="DECREMENT" value="1" literal="--"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="IncrementDecrementPosition">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Representing pre- or post-processing inside increment/decrement expressions."/>
-      </eAnnotations>
-      <eLiterals name="PRE" literal="PRE"/>
-      <eLiterals name="POST" value="1" literal="POST"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BitShiftExpression" eSuperTypes="#//expressions/BinaryExpression">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1640,13 +1674,13 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Represents a point in the two-dimensional space."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           defaultValueLiteral="0">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The horizontal component of the point."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           defaultValueLiteral="0">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The vertical component of the point."/>

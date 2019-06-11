@@ -77,6 +77,7 @@ public class TypeDeclarationImpl extends DeclarationImpl implements TypeDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeclaredType> getType() {
 		if (type == null) {
 			type = new EObjectContainmentWithInverseEList<DeclaredType>(DeclaredType.class, this, DeclarationsPackage.TYPE_DECLARATION__TYPE, TypesPackage.DECLARED_TYPE__TYPE_DECLARATION);
@@ -89,6 +90,7 @@ public class TypeDeclarationImpl extends DeclarationImpl implements TypeDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getTypeDefinition() {
 		return typeDefinition;
 	}
@@ -113,6 +115,7 @@ public class TypeDeclarationImpl extends DeclarationImpl implements TypeDeclarat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeDefinition(TypeDefinition newTypeDefinition) {
 		if (newTypeDefinition != typeDefinition) {
 			NotificationChain msgs = null;

@@ -58,6 +58,7 @@ public class TypeReferenceImpl extends TypeDefinitionImpl implements TypeReferen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getReferredType() {
 		if (referredType != null && referredType.eIsProxy()) {
 			InternalEObject oldReferredType = (InternalEObject)referredType;
@@ -84,6 +85,7 @@ public class TypeReferenceImpl extends TypeDefinitionImpl implements TypeReferen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferredType(Type newReferredType) {
 		Type oldReferredType = referredType;
 		referredType = newReferredType;

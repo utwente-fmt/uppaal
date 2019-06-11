@@ -71,6 +71,7 @@ public class DoWhileLoopImpl extends StatementImpl implements DoWhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getStatement() {
 		return statement;
 	}
@@ -95,6 +96,7 @@ public class DoWhileLoopImpl extends StatementImpl implements DoWhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatement(Statement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;
@@ -114,6 +116,7 @@ public class DoWhileLoopImpl extends StatementImpl implements DoWhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -138,6 +141,7 @@ public class DoWhileLoopImpl extends StatementImpl implements DoWhileLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;

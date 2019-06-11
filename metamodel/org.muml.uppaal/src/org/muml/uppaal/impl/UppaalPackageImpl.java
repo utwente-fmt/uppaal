@@ -138,6 +138,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 		EValidator.Registry.INSTANCE.put
 			(theUppaalPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return UppaalValidator.INSTANCE;
 				 }
@@ -156,6 +157,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNTA() {
 		return ntaEClass;
 	}
@@ -165,6 +167,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_GlobalDeclarations() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(0);
 	}
@@ -174,6 +177,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Template() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(1);
 	}
@@ -183,6 +187,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_SystemDeclarations() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(2);
 	}
@@ -192,6 +197,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Int() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(3);
 	}
@@ -201,6 +207,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Bool() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(4);
 	}
@@ -210,6 +217,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Clock() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(5);
 	}
@@ -219,6 +227,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Chan() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(6);
 	}
@@ -228,6 +237,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNTA_Void() {
 		return (EReference)ntaEClass.getEStructuralFeatures().get(7);
 	}
@@ -237,6 +247,7 @@ public class UppaalPackageImpl extends EPackageImpl implements UppaalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UppaalFactory getUppaalFactory() {
 		return (UppaalFactory)getEFactoryInstance();
 	}

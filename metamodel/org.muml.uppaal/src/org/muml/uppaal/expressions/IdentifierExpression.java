@@ -20,6 +20,7 @@ import org.muml.uppaal.core.NamedElement;
  * <ul>
  *   <li>{@link org.muml.uppaal.expressions.IdentifierExpression#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.muml.uppaal.expressions.IdentifierExpression#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.muml.uppaal.expressions.IdentifierExpression#isClockRate <em>Clock Rate</em>}</li>
  * </ul>
  *
  * @see org.muml.uppaal.expressions.ExpressionsPackage#getIdentifierExpression()
@@ -66,5 +67,31 @@ public interface IdentifierExpression extends Expression {
 	 * @generated
 	 */
 	EList<Expression> getIndex();
+
+	/**
+	 * Returns the value of the '<em><b>Clock Rate</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specifies whether the declared synchronization channels use broadcast.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Clock Rate</em>' attribute.
+	 * @see #setClockRate(boolean)
+	 * @see org.muml.uppaal.expressions.ExpressionsPackage#getIdentifierExpression_ClockRate()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isClockRate();
+
+	/**
+	 * Sets the value of the '{@link org.muml.uppaal.expressions.IdentifierExpression#isClockRate <em>Clock Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Clock Rate</em>' attribute.
+	 * @see #isClockRate()
+	 * @generated
+	 */
+	void setClockRate(boolean value);
 
 } // IdentifierExpression

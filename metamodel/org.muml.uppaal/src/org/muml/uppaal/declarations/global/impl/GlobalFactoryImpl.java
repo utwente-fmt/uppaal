@@ -71,6 +71,7 @@ public class GlobalFactoryImpl extends EFactoryImpl implements GlobalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChannelPriority createChannelPriority() {
 		ChannelPriorityImpl channelPriority = new ChannelPriorityImpl();
 		return channelPriority;
@@ -81,6 +82,7 @@ public class GlobalFactoryImpl extends EFactoryImpl implements GlobalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChannelList createChannelList() {
 		ChannelListImpl channelList = new ChannelListImpl();
 		return channelList;
@@ -91,6 +93,7 @@ public class GlobalFactoryImpl extends EFactoryImpl implements GlobalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DefaultChannelPriority createDefaultChannelPriority() {
 		DefaultChannelPriorityImpl defaultChannelPriority = new DefaultChannelPriorityImpl();
 		return defaultChannelPriority;
@@ -101,6 +104,7 @@ public class GlobalFactoryImpl extends EFactoryImpl implements GlobalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalPackage getGlobalPackage() {
 		return (GlobalPackage)getEPackage();
 	}

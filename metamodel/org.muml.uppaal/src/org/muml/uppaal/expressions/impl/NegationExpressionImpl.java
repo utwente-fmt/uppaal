@@ -59,6 +59,7 @@ public class NegationExpressionImpl extends ExpressionImpl implements NegationEx
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getNegatedExpression() {
 		return negatedExpression;
 	}
@@ -83,6 +84,7 @@ public class NegationExpressionImpl extends ExpressionImpl implements NegationEx
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNegatedExpression(Expression newNegatedExpression) {
 		if (newNegatedExpression != negatedExpression) {
 			NotificationChain msgs = null;

@@ -27,14 +27,23 @@ import org.muml.uppaal.types.TypesPackage;
  */
 public abstract class TypeDefinitionImpl extends EObjectImpl implements TypeDefinition {
 	/**
-	 * The default value of the '{@link #getBaseType() <em>Base Type</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getBaseType() <em>Base Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBaseType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BuiltInType BASE_TYPE_EDEFAULT = BuiltInType.INT;
+	protected EStructuralFeature.Internal.SettingDelegate BASE_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)TypesPackage.Literals.TYPE_DEFINITION__BASE_TYPE).getSettingDelegate();
+	/**
+	 * The cached setting delegate for the '{@link #getTypeSpecification() <em>Type Specification</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypeSpecification()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate TYPE_SPECIFICATION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)TypesPackage.Literals.TYPE_DEFINITION__TYPE_SPECIFICATION).getSettingDelegate();
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,10 +68,9 @@ public abstract class TypeDefinitionImpl extends EObjectImpl implements TypeDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BuiltInType getBaseType() {
-		// TODO: implement this method to return the 'Base Type' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return (BuiltInType)BASE_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -70,18 +78,18 @@ public abstract class TypeDefinitionImpl extends EObjectImpl implements TypeDefi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeSpecification getTypeSpecification() {
-		TypeSpecification typeSpecification = basicGetTypeSpecification();
-		return typeSpecification != null && typeSpecification.eIsProxy() ? (TypeSpecification)eResolveProxy((InternalEObject)typeSpecification) : typeSpecification;
+		return (TypeSpecification)TYPE_SPECIFICATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * ER: Don't really know whether this implementation is correct.
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public TypeSpecification basicGetTypeSpecification() {
-		return null;
+		return (TypeSpecification)TYPE_SPECIFICATION__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
 	}
 
 	/**
@@ -110,9 +118,9 @@ public abstract class TypeDefinitionImpl extends EObjectImpl implements TypeDefi
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case TypesPackage.TYPE_DEFINITION__BASE_TYPE:
-				return getBaseType() != BASE_TYPE_EDEFAULT;
+				return BASE_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case TypesPackage.TYPE_DEFINITION__TYPE_SPECIFICATION:
-				return basicGetTypeSpecification() != null;
+				return TYPE_SPECIFICATION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

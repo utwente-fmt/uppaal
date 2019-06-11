@@ -71,6 +71,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NSTA createNSTA() {
 		NSTAImpl nsta = new NSTAImpl();
 		return nsta;
@@ -81,6 +82,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DoubleType createDoubleType() {
 		DoubleTypeImpl doubleType = new DoubleTypeImpl();
 		return doubleType;
@@ -91,6 +93,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChanceNode createChanceNode() {
 		ChanceNodeImpl chanceNode = new ChanceNodeImpl();
 		return chanceNode;
@@ -101,6 +104,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChanceEdge createChanceEdge() {
 		ChanceEdgeImpl chanceEdge = new ChanceEdgeImpl();
 		return chanceEdge;
@@ -111,6 +115,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExponentialLocation createExponentialLocation() {
 		ExponentialLocationImpl exponentialLocation = new ExponentialLocationImpl();
 		return exponentialLocation;
@@ -121,6 +126,7 @@ public class UppaalSMCFactoryImpl extends EFactoryImpl implements UppaalSMCFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UppaalSMCPackage getUppaalSMCPackage() {
 		return (UppaalSMCPackage)getEPackage();
 	}

@@ -168,6 +168,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -177,6 +178,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		String oldComment = comment;
 		comment = newComment;
@@ -189,6 +191,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalDeclarations getGlobalDeclarations() {
 		return globalDeclarations;
 	}
@@ -213,6 +216,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGlobalDeclarations(GlobalDeclarations newGlobalDeclarations) {
 		if (newGlobalDeclarations != globalDeclarations) {
 			NotificationChain msgs = null;
@@ -232,6 +236,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Template> getTemplate() {
 		if (template == null) {
 			template = new EObjectContainmentEList<Template>(Template.class, this, UppaalPackage.NTA__TEMPLATE);
@@ -244,6 +249,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemDeclarations getSystemDeclarations() {
 		return systemDeclarations;
 	}
@@ -268,6 +274,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemDeclarations(SystemDeclarations newSystemDeclarations) {
 		if (newSystemDeclarations != systemDeclarations) {
 			NotificationChain msgs = null;
@@ -287,6 +294,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getInt() {
 		return int_;
 	}
@@ -311,6 +319,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInt(PredefinedType newInt) {
 		if (newInt != int_) {
 			NotificationChain msgs = null;
@@ -330,6 +339,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getBool() {
 		return bool;
 	}
@@ -354,6 +364,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBool(PredefinedType newBool) {
 		if (newBool != bool) {
 			NotificationChain msgs = null;
@@ -373,6 +384,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getClock() {
 		return clock;
 	}
@@ -397,6 +409,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClock(PredefinedType newClock) {
 		if (newClock != clock) {
 			NotificationChain msgs = null;
@@ -416,6 +429,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getChan() {
 		return chan;
 	}
@@ -440,6 +454,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChan(PredefinedType newChan) {
 		if (newChan != chan) {
 			NotificationChain msgs = null;
@@ -459,6 +474,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PredefinedType getVoid() {
 		return void_;
 	}
@@ -483,6 +499,7 @@ public class NTAImpl extends NamedElementImpl implements NTA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVoid(PredefinedType newVoid) {
 		if (newVoid != void_) {
 			NotificationChain msgs = null;

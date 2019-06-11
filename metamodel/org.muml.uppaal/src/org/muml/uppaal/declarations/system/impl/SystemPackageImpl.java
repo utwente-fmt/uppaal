@@ -162,6 +162,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 		EValidator.Registry.INSTANCE.put
 			(theSystemPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return SystemValidator.INSTANCE;
 				 }
@@ -180,6 +181,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTemplateDeclaration() {
 		return templateDeclarationEClass;
 	}
@@ -189,6 +191,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateDeclaration_DeclaredTemplate() {
 		return (EReference)templateDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -198,6 +201,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTemplateDeclaration_Argument() {
 		return (EReference)templateDeclarationEClass.getEStructuralFeatures().get(1);
 	}
@@ -207,6 +211,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSystem() {
 		return systemEClass;
 	}
@@ -216,6 +221,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystem_InstantiationList() {
 		return (EReference)systemEClass.getEStructuralFeatures().get(0);
 	}
@@ -225,6 +231,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstantiationList() {
 		return instantiationListEClass;
 	}
@@ -234,6 +241,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstantiationList_Template() {
 		return (EReference)instantiationListEClass.getEStructuralFeatures().get(0);
 	}
@@ -243,6 +251,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProgressMeasure() {
 		return progressMeasureEClass;
 	}
@@ -252,6 +261,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProgressMeasure_Expression() {
 		return (EReference)progressMeasureEClass.getEStructuralFeatures().get(0);
 	}
@@ -261,6 +271,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemFactory getSystemFactory() {
 		return (SystemFactory)getEFactoryInstance();
 	}

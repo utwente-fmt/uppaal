@@ -59,6 +59,7 @@ public class FunctionDeclarationImpl extends DeclarationImpl implements Function
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Function getFunction() {
 		return function;
 	}
@@ -83,6 +84,7 @@ public class FunctionDeclarationImpl extends DeclarationImpl implements Function
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFunction(Function newFunction) {
 		if (newFunction != function) {
 			NotificationChain msgs = null;

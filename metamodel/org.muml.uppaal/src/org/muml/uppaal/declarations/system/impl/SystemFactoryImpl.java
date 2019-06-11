@@ -71,6 +71,7 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateDeclaration createTemplateDeclaration() {
 		TemplateDeclarationImpl templateDeclaration = new TemplateDeclarationImpl();
 		return templateDeclaration;
@@ -81,6 +82,7 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.muml.uppaal.declarations.system.System createSystem() {
 		SystemImpl system = new SystemImpl();
 		return system;
@@ -91,6 +93,7 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstantiationList createInstantiationList() {
 		InstantiationListImpl instantiationList = new InstantiationListImpl();
 		return instantiationList;
@@ -101,6 +104,7 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProgressMeasure createProgressMeasure() {
 		ProgressMeasureImpl progressMeasure = new ProgressMeasureImpl();
 		return progressMeasure;
@@ -111,6 +115,7 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemPackage getSystemPackage() {
 		return (SystemPackage)getEPackage();
 	}

@@ -212,7 +212,12 @@ public class ProgressMeasureItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemPackage.Literals.PROGRESS_MEASURE__EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SystemPackage.Literals.PROGRESS_MEASURE__EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

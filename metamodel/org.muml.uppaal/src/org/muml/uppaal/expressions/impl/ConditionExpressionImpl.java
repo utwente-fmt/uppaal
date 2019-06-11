@@ -81,6 +81,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getIfExpression() {
 		return ifExpression;
 	}
@@ -105,6 +106,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIfExpression(Expression newIfExpression) {
 		if (newIfExpression != ifExpression) {
 			NotificationChain msgs = null;
@@ -124,6 +126,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getThenExpression() {
 		return thenExpression;
 	}
@@ -148,6 +151,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThenExpression(Expression newThenExpression) {
 		if (newThenExpression != thenExpression) {
 			NotificationChain msgs = null;
@@ -167,6 +171,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getElseExpression() {
 		return elseExpression;
 	}
@@ -191,6 +196,7 @@ public class ConditionExpressionImpl extends ExpressionImpl implements Condition
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setElseExpression(Expression newElseExpression) {
 		if (newElseExpression != elseExpression) {
 			NotificationChain msgs = null;

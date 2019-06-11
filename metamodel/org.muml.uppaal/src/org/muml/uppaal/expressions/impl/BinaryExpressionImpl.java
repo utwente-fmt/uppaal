@@ -70,6 +70,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getFirstExpr() {
 		return firstExpr;
 	}
@@ -94,6 +95,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstExpr(Expression newFirstExpr) {
 		if (newFirstExpr != firstExpr) {
 			NotificationChain msgs = null;
@@ -113,6 +115,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getSecondExpr() {
 		return secondExpr;
 	}
@@ -137,6 +140,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecondExpr(Expression newSecondExpr) {
 		if (newSecondExpr != secondExpr) {
 			NotificationChain msgs = null;

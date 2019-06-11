@@ -93,6 +93,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInitialization() {
 		return initialization;
 	}
@@ -117,6 +118,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitialization(Expression newInitialization) {
 		if (newInitialization != initialization) {
 			NotificationChain msgs = null;
@@ -136,6 +138,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getCondition() {
 		return condition;
 	}
@@ -160,6 +163,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Expression newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -179,6 +183,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getIteration() {
 		return iteration;
 	}
@@ -203,6 +208,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIteration(Expression newIteration) {
 		if (newIteration != iteration) {
 			NotificationChain msgs = null;
@@ -222,6 +228,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement getStatement() {
 		return statement;
 	}
@@ -246,6 +253,7 @@ public class ForLoopImpl extends StatementImpl implements ForLoop {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatement(Statement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;

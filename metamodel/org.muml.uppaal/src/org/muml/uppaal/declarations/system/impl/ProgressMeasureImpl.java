@@ -63,6 +63,7 @@ public class ProgressMeasureImpl extends EObjectImpl implements ProgressMeasure 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getExpression() {
 		if (expression == null) {
 			expression = new EObjectContainmentEList<Expression>(Expression.class, this, SystemPackage.PROGRESS_MEASURE__EXPRESSION);

@@ -317,6 +317,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 		EValidator.Registry.INSTANCE.put
 			(theDeclarationsPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return DeclarationsValidator.INSTANCE;
 				 }
@@ -335,6 +336,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeclarations() {
 		return declarationsEClass;
 	}
@@ -344,6 +346,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeclarations_Declaration() {
 		return (EReference)declarationsEClass.getEStructuralFeatures().get(0);
 	}
@@ -353,6 +356,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGlobalDeclarations() {
 		return globalDeclarationsEClass;
 	}
@@ -362,6 +366,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGlobalDeclarations_ChannelPriority() {
 		return (EReference)globalDeclarationsEClass.getEStructuralFeatures().get(0);
 	}
@@ -371,6 +376,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLocalDeclarations() {
 		return localDeclarationsEClass;
 	}
@@ -380,6 +386,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSystemDeclarations() {
 		return systemDeclarationsEClass;
 	}
@@ -389,6 +396,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemDeclarations_System() {
 		return (EReference)systemDeclarationsEClass.getEStructuralFeatures().get(0);
 	}
@@ -398,6 +406,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemDeclarations_ProgressMeasure() {
 		return (EReference)systemDeclarationsEClass.getEStructuralFeatures().get(1);
 	}
@@ -407,6 +416,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeclaration() {
 		return declarationEClass;
 	}
@@ -416,6 +426,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclaration() {
 		return variableDeclarationEClass;
 	}
@@ -425,6 +436,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChannelVariableDeclaration() {
 		return channelVariableDeclarationEClass;
 	}
@@ -434,6 +446,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChannelVariableDeclaration_Urgent() {
 		return (EAttribute)channelVariableDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -443,6 +456,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getChannelVariableDeclaration_Broadcast() {
 		return (EAttribute)channelVariableDeclarationEClass.getEStructuralFeatures().get(1);
 	}
@@ -452,6 +466,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClockVariableDeclaration() {
 		return clockVariableDeclarationEClass;
 	}
@@ -461,6 +476,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataVariableDeclaration() {
 		return dataVariableDeclarationEClass;
 	}
@@ -470,6 +486,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataVariableDeclaration_Prefix() {
 		return (EAttribute)dataVariableDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -479,6 +496,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFunctionDeclaration() {
 		return functionDeclarationEClass;
 	}
@@ -488,6 +506,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunctionDeclaration_Function() {
 		return (EReference)functionDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -497,6 +516,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFunction() {
 		return functionEClass;
 	}
@@ -506,6 +526,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunction_ReturnType() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(0);
 	}
@@ -515,6 +536,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunction_Block() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(1);
 	}
@@ -524,6 +546,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFunction_Parameter() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(2);
 	}
@@ -533,6 +556,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeDeclaration() {
 		return typeDeclarationEClass;
 	}
@@ -542,6 +566,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclaration_Type() {
 		return (EReference)typeDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -551,6 +576,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclaration_TypeDefinition() {
 		return (EReference)typeDeclarationEClass.getEStructuralFeatures().get(1);
 	}
@@ -560,6 +586,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -569,6 +596,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariable_Index() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
 	}
@@ -578,6 +606,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariable_Container() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(1);
 	}
@@ -587,6 +616,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariable_TypeDefinition() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(2);
 	}
@@ -596,6 +626,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariable_Initializer() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(3);
 	}
@@ -605,6 +636,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIndex() {
 		return indexEClass;
 	}
@@ -614,6 +646,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getValueIndex() {
 		return valueIndexEClass;
 	}
@@ -623,6 +656,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getValueIndex_SizeExpression() {
 		return (EReference)valueIndexEClass.getEStructuralFeatures().get(0);
 	}
@@ -632,6 +666,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeIndex() {
 		return typeIndexEClass;
 	}
@@ -641,6 +676,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeIndex_TypeDefinition() {
 		return (EReference)typeIndexEClass.getEStructuralFeatures().get(0);
 	}
@@ -650,6 +686,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableContainer() {
 		return variableContainerEClass;
 	}
@@ -659,6 +696,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableContainer_TypeDefinition() {
 		return (EReference)variableContainerEClass.getEStructuralFeatures().get(0);
 	}
@@ -668,6 +706,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVariableContainer_Variable() {
 		return (EReference)variableContainerEClass.getEStructuralFeatures().get(1);
 	}
@@ -677,6 +716,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -686,6 +726,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameter_VariableDeclaration() {
 		return (EReference)parameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -695,6 +736,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameter_CallType() {
 		return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
 	}
@@ -704,6 +746,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInitializer() {
 		return initializerEClass;
 	}
@@ -713,6 +756,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionInitializer() {
 		return expressionInitializerEClass;
 	}
@@ -722,6 +766,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpressionInitializer_Expression() {
 		return (EReference)expressionInitializerEClass.getEStructuralFeatures().get(0);
 	}
@@ -731,6 +776,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayInitializer() {
 		return arrayInitializerEClass;
 	}
@@ -740,6 +786,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayInitializer_Initializer() {
 		return (EReference)arrayInitializerEClass.getEStructuralFeatures().get(0);
 	}
@@ -749,6 +796,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDataVariablePrefix() {
 		return dataVariablePrefixEEnum;
 	}
@@ -758,6 +806,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCallType() {
 		return callTypeEEnum;
 	}
@@ -767,6 +816,7 @@ public class DeclarationsPackageImpl extends EPackageImpl implements Declaration
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeclarationsFactory getDeclarationsFactory() {
 		return (DeclarationsFactory)getEFactoryInstance();
 	}

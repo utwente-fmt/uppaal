@@ -203,7 +203,12 @@ public class IfStatementItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(StatementsPackage.Literals.IF_STATEMENT__IF_EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StatementsPackage.Literals.IF_STATEMENT__IF_EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

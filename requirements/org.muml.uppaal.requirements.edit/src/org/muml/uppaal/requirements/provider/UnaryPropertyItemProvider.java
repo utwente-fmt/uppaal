@@ -259,7 +259,12 @@ public class UnaryPropertyItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(RequirementsPackage.Literals.UNARY_PROPERTY__EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RequirementsPackage.Literals.UNARY_PROPERTY__EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

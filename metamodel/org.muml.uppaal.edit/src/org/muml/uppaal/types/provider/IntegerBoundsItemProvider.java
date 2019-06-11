@@ -214,7 +214,12 @@ public class IntegerBoundsItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TypesPackage.Literals.INTEGER_BOUNDS__LOWER_BOUND,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TypesPackage.Literals.INTEGER_BOUNDS__LOWER_BOUND,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -299,7 +304,12 @@ public class IntegerBoundsItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TypesPackage.Literals.INTEGER_BOUNDS__UPPER_BOUND,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TypesPackage.Literals.INTEGER_BOUNDS__UPPER_BOUND,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

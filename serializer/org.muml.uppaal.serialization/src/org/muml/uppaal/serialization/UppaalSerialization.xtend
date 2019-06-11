@@ -41,9 +41,7 @@ import org.muml.uppaal.expressions.ConditionExpression
 import org.muml.uppaal.expressions.Expression
 import org.muml.uppaal.expressions.FunctionCallExpression
 import org.muml.uppaal.expressions.IdentifierExpression
-import org.muml.uppaal.expressions.IncrementDecrementExpression
 import org.muml.uppaal.expressions.IncrementDecrementOperator
-import org.muml.uppaal.expressions.IncrementDecrementPosition
 import org.muml.uppaal.expressions.LiteralExpression
 import org.muml.uppaal.expressions.LogicalExpression
 import org.muml.uppaal.expressions.LogicalOperator
@@ -79,6 +77,8 @@ import org.muml.uppaal.types.StructTypeSpecification
 import org.muml.uppaal.types.Type
 import org.muml.uppaal.types.TypeReference
 import org.muml.uppaal.visuals.ColorKind
+import org.muml.uppaal.expressions.PreIncrementDecrementExpression
+import org.muml.uppaal.expressions.PostIncrementDecrementExpression
 
 class UppaalSerialization {
 	var moveEdgeLabelsAway = false;
@@ -152,11 +152,11 @@ class UppaalSerialization {
 	
 	def dispatch prefix(DataVariableDeclaration it) '''«IF prefix != DataVariablePrefix::NONE»«prefix.toString()» «ENDIF»'''
 	
-	def dispatch prefix(ChannelVariableDeclaration it) '''«IF broadcast»broadcast «ENDIF»«IF urgent»urgent «ENDIF»'''
+	def dispatch prefix(ChannelVariableDeclaration it) '''«IF urgent»urgent «ENDIF»«IF broadcast»broadcast «ENDIF»'''
 	
 	def dispatch declaration(TemplateDeclaration it) '''«name(declaredTemplate)»«IF declaredTemplate.parameter.size > 0»(«FOR i : declaredTemplate.parameter ?:emptyList SEPARATOR ', '»«parameter(i)»«ENDFOR»)«ENDIF» = «name(declaredTemplate.referredTemplate)»(«FOR i : argument ?:emptyList SEPARATOR ', '»«expression(i)»«ENDFOR»);'''
 	
-	def dispatch channelPriority(ChannelPriority it) '''chan priority «FOR i : item ?:emptyList SEPARATOR ' < '»«item(i)»«ENDFOR»;'''
+	def dispatch channelPriority(ChannelPriority it) '''chan priority «FOR i : item ?:emptyList SEPARATOR ' &lt; '»«item(i)»«ENDFOR»;'''
 	
 	def dispatch channelPriority(Void it) ''''''
 	
@@ -310,7 +310,7 @@ class UppaalSerialization {
 	
 	def dispatch expression(AssignmentExpression it) '''«expressionOptionalParentheses(firstExpr)» «assignment(operator)» «expressionOptionalParentheses(secondExpr)»'''
 	
-	def dispatch expression(IdentifierExpression it) '''«name(identifier)»«IF !index.isEmpty»[«FOR i : index ?:emptyList SEPARATOR ']['»«expression(i)»«ENDFOR»]«ENDIF»'''
+	def dispatch expression(IdentifierExpression it) '''«name(identifier)»«IF !index.isEmpty»[«FOR i : index ?:emptyList SEPARATOR ']['»«expression(i)»«ENDFOR»]«ENDIF»«IF clockRate»'«ENDIF»'''
 	
 	def dispatch expression(NegationExpression it) '''not «expressionOptionalParentheses(negatedExpression)»'''
 	
@@ -324,7 +324,9 @@ class UppaalSerialization {
 	
 	def dispatch expression(LiteralExpression it) '''«text»'''
 	
-	def dispatch expression(IncrementDecrementExpression it) '''«IF position==IncrementDecrementPosition::PRE»«operator(operator)»«ENDIF»«expressionOptionalParentheses(expression)»«IF position==IncrementDecrementPosition::POST»«operator(operator)»«ENDIF»'''
+	def dispatch expression(PostIncrementDecrementExpression it) '''«expressionOptionalParentheses(expression)»«operator(operator)»'''
+	
+	def dispatch expression(PreIncrementDecrementExpression it) '''«operator(operator)»«expressionOptionalParentheses(expression)»'''
 	
 	def operator(IncrementDecrementOperator it) '''«IF it==IncrementDecrementOperator::INCREMENT»++«ENDIF»«IF it==IncrementDecrementOperator::DECREMENT»--«ENDIF»'''
 	
@@ -340,14 +342,14 @@ class UppaalSerialization {
 	
 	def dispatch expression(MinusExpression it) '''-«expressionOptionalParentheses(invertedExpression)»'''
 	
-	def dispatch expression(MinMaxExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator == MinMaxOperator::MIN»<?«ENDIF»«IF operator == MinMaxOperator::MAX»>?«ENDIF» «expressionOptionalParenthesesNonAssoc(secondExpr)»'''
+	def dispatch expression(MinMaxExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator == MinMaxOperator::MIN»&lt;?«ENDIF»«IF operator == MinMaxOperator::MAX»&gt;?«ENDIF» «expressionOptionalParenthesesNonAssoc(secondExpr)»'''
 	
-	def dispatch expression(BitwiseExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator==BitwiseOperator::AND»&«ENDIF»«IF operator==BitwiseOperator::OR»|«ENDIF»«IF operator==BitwiseOperator::XOR»^«ENDIF» «expressionOptionalParentheses(secondExpr)»'''
+	def dispatch expression(BitwiseExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator==BitwiseOperator::AND»&amp;«ENDIF»«IF operator==BitwiseOperator::OR»|«ENDIF»«IF operator==BitwiseOperator::XOR»^«ENDIF» «expressionOptionalParentheses(secondExpr)»'''
 	
-	def dispatch expression(BitShiftExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator==BitShiftOperator::LEFT»<<«ENDIF»«IF operator==BitShiftOperator::RIGHT»>>«ENDIF» «expressionOptionalParenthesesNonAssoc(secondExpr)»'''
+	def dispatch expression(BitShiftExpression it) '''«expressionOptionalParentheses(firstExpr)» «IF operator==BitShiftOperator::LEFT»&lt;&lt;«ENDIF»«IF operator==BitShiftOperator::RIGHT»&gt;&gt;>«ENDIF» «expressionOptionalParenthesesNonAssoc(secondExpr)»'''
 	
 	/* define system */
-	def system(System it) '''system «FOR i : instantiationList ?:emptyList SEPARATOR ' < '»«instantiationList(i)»«ENDFOR»;'''
+	def system(System it) '''system «FOR i : instantiationList ?:emptyList SEPARATOR ' &lt; '»«instantiationList(i)»«ENDFOR»;'''
 	
 	def instantiationList(InstantiationList it) '''«FOR AbstractTemplate i : template ?:emptyList SEPARATOR ','»«name(i)»«ENDFOR»'''
 	
@@ -362,6 +364,11 @@ class UppaalSerialization {
 			case AssignmentOperator::TIMES_EQUAL : '*='
 			case AssignmentOperator::DIVIDE_EQUAL : '/='
 			case AssignmentOperator::MODULO_EQUAL : '%='
+            case AssignmentOperator::BIT_AND_EQUAL : '&amp;='
+            case AssignmentOperator::BIT_OR_EQUAL : '|='
+            case AssignmentOperator::BIT_LEFT_EQUAL : '&lt;&lt;='
+            case AssignmentOperator::BIT_RIGHT_EQUAL : '&gt;&gt;='
+            case AssignmentOperator::BIT_XOR_EQUAL : '^='
 			default: ""
 		}
 	}
@@ -414,7 +421,8 @@ class UppaalSerialization {
 			case it instanceof LiteralExpression: return 500
 			case it instanceof FunctionCallExpression: return 500
 			
-			case it instanceof IncrementDecrementExpression: return 300
+			case it instanceof PreIncrementDecrementExpression: return 300
+			case it instanceof PostIncrementDecrementExpression: return 300
 			case it instanceof PlusExpression: return 300
 			case it instanceof MinusExpression: return 300
 

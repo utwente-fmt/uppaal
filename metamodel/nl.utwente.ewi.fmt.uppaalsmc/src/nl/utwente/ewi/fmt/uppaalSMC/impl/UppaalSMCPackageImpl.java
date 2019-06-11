@@ -8,8 +8,6 @@ import nl.utwente.ewi.fmt.uppaalSMC.DoubleType;
 import nl.utwente.ewi.fmt.uppaalSMC.ExponentialLocation;
 import nl.utwente.ewi.fmt.uppaalSMC.UppaalSMCFactory;
 import nl.utwente.ewi.fmt.uppaalSMC.UppaalSMCPackage;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -135,6 +133,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNSTA() {
 		return nstaEClass;
 	}
@@ -144,6 +143,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNSTA_Double() {
 		return (EReference)nstaEClass.getEStructuralFeatures().get(0);
 	}
@@ -153,6 +153,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDoubleType() {
 		return doubleTypeEClass;
 	}
@@ -162,6 +163,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChanceNode() {
 		return chanceNodeEClass;
 	}
@@ -171,6 +173,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChanceEdge() {
 		return chanceEdgeEClass;
 	}
@@ -180,8 +183,9 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getChanceEdge_Weight() {
-		return (EAttribute)chanceEdgeEClass.getEStructuralFeatures().get(0);
+	@Override
+	public EReference getChanceEdge_Weight() {
+		return (EReference)chanceEdgeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -189,6 +193,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExponentialLocation() {
 		return exponentialLocationEClass;
 	}
@@ -198,6 +203,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExponentialLocation_ExitRate() {
 		return (EReference)exponentialLocationEClass.getEStructuralFeatures().get(0);
 	}
@@ -207,6 +213,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UppaalSMCFactory getUppaalSMCFactory() {
 		return (UppaalSMCFactory)getEFactoryInstance();
 	}
@@ -238,7 +245,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 		chanceNodeEClass = createEClass(CHANCE_NODE);
 
 		chanceEdgeEClass = createEClass(CHANCE_EDGE);
-		createEAttribute(chanceEdgeEClass, CHANCE_EDGE__WEIGHT);
+		createEReference(chanceEdgeEClass, CHANCE_EDGE__WEIGHT);
 
 		exponentialLocationEClass = createEClass(EXPONENTIAL_LOCATION);
 		createEReference(exponentialLocationEClass, EXPONENTIAL_LOCATION__EXIT_RATE);
@@ -293,7 +300,7 @@ public class UppaalSMCPackageImpl extends EPackageImpl implements UppaalSMCPacka
 		initEClass(chanceNodeEClass, ChanceNode.class, "ChanceNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(chanceEdgeEClass, ChanceEdge.class, "ChanceEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getChanceEdge_Weight(), ecorePackage.getEInt(), "weight", null, 1, 1, ChanceEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChanceEdge_Weight(), theExpressionsPackage.getExpression(), null, "weight", null, 1, 1, ChanceEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exponentialLocationEClass, ExponentialLocation.class, "ExponentialLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExponentialLocation_ExitRate(), theExpressionsPackage.getExpression(), null, "exitRate", null, 1, 1, ExponentialLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

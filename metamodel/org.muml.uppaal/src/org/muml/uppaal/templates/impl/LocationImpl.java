@@ -166,6 +166,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -175,6 +176,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		String oldComment = comment;
 		comment = newComment;
@@ -187,6 +189,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Point getPosition() {
 		return position;
 	}
@@ -211,6 +214,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosition(Point newPosition) {
 		if (newPosition != position) {
 			NotificationChain msgs = null;
@@ -230,6 +234,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColorKind getColor() {
 		return color;
 	}
@@ -239,6 +244,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColor(ColorKind newColor) {
 		ColorKind oldColor = color;
 		color = newColor == null ? COLOR_EDEFAULT : newColor;
@@ -251,6 +257,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColorCode() {
 		return colorCode;
 	}
@@ -260,6 +267,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColorCode(String newColorCode) {
 		String oldColorCode = colorCode;
 		colorCode = newColorCode;
@@ -272,6 +280,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Template getParentTemplate() {
 		if (eContainerFeatureID() != TemplatesPackage.LOCATION__PARENT_TEMPLATE) return null;
 		return (Template)eInternalContainer();
@@ -292,6 +301,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentTemplate(Template newParentTemplate) {
 		if (newParentTemplate != eInternalContainer() || (eContainerFeatureID() != TemplatesPackage.LOCATION__PARENT_TEMPLATE && newParentTemplate != null)) {
 			if (EcoreUtil.isAncestor(this, newParentTemplate))
@@ -313,6 +323,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInvariant() {
 		return invariant;
 	}
@@ -337,6 +348,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInvariant(Expression newInvariant) {
 		if (newInvariant != invariant) {
 			NotificationChain msgs = null;
@@ -356,6 +368,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocationKind getLocationTimeKind() {
 		return locationTimeKind;
 	}
@@ -365,6 +378,7 @@ public class LocationImpl extends NamedElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocationTimeKind(LocationKind newLocationTimeKind) {
 		LocationKind oldLocationTimeKind = locationTimeKind;
 		locationTimeKind = newLocationTimeKind == null ? LOCATION_TIME_KIND_EDEFAULT : newLocationTimeKind;

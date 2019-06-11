@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.uppaal/src" editDirectory="/org.muml.uppaal.edit/src"
-	modelPluginID="org.muml.uppaal" modelName="Uppaal" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    copyrightFields="false">
+    modelPluginID="org.muml.uppaal" modelName="Uppaal" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
   <foreignModel>uppaal.ecore</foreignModel>
   <genPackages prefix="Uppaal" basePackage="org.muml" resource="XML" disposableProviderFactory="true"
       ecorePackage="uppaal.ecore#/">
@@ -72,8 +72,8 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//types/Library/types"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Declarations" basePackage="org.muml.uppaal"
-        resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations">
+    <nestedGenPackages prefix="Declarations" basePackage="org.muml.uppaal" resource="XML"
+        disposableProviderFactory="true" ecorePackage="uppaal.ecore#//declarations">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//declarations/DataVariablePrefix">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//declarations/DataVariablePrefix/NONE"/>
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//declarations/DataVariablePrefix/CONST"/>
@@ -258,8 +258,8 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//statements/ExpressionStatement/expression"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Expressions" basePackage="org.muml.uppaal"
-        resource="XML" disposableProviderFactory="true" ecorePackage="uppaal.ecore#//expressions">
+    <nestedGenPackages prefix="Expressions" basePackage="org.muml.uppaal" resource="XML"
+        disposableProviderFactory="true" ecorePackage="uppaal.ecore#//expressions">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//expressions/AssignmentOperator">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/AssignmentOperator/EQUAL"/>
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/AssignmentOperator/PLUS_EQUAL"/>
@@ -301,10 +301,6 @@
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/IncrementDecrementOperator/INCREMENT"/>
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/IncrementDecrementOperator/DECREMENT"/>
       </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//expressions/IncrementDecrementPosition">
-        <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/IncrementDecrementPosition/PRE"/>
-        <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/IncrementDecrementPosition/POST"/>
-      </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="uppaal.ecore#//expressions/BitShiftOperator">
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/BitShiftOperator/LEFT"/>
         <genEnumLiterals ecoreEnumLiteral="uppaal.ecore#//expressions/BitShiftOperator/RIGHT"/>
@@ -339,6 +335,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference uppaal.ecore#//expressions/IdentifierExpression/identifier"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//expressions/IdentifierExpression/index"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/IdentifierExpression/clockRate"/>
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//expressions/LiteralExpression">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/LiteralExpression/text"/>
@@ -370,10 +367,13 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/QuantificationExpression/quantifier"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//expressions/QuantificationExpression/expression"/>
       </genClasses>
-      <genClasses ecoreClass="uppaal.ecore#//expressions/IncrementDecrementExpression">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//expressions/IncrementDecrementExpression/expression"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/IncrementDecrementExpression/position"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/IncrementDecrementExpression/operator"/>
+      <genClasses ecoreClass="uppaal.ecore#//expressions/PostIncrementDecrementExpression">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//expressions/PostIncrementDecrementExpression/expression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/PostIncrementDecrementExpression/operator"/>
+      </genClasses>
+      <genClasses ecoreClass="uppaal.ecore#//expressions/PreIncrementDecrementExpression">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uppaal.ecore#//expressions/PreIncrementDecrementExpression/expression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/PreIncrementDecrementExpression/operator"/>
       </genClasses>
       <genClasses ecoreClass="uppaal.ecore#//expressions/BitShiftExpression">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uppaal.ecore#//expressions/BitShiftExpression/operator"/>

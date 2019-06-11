@@ -8,8 +8,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="DoubleType" eSuperTypes="../../org.muml.uppaal/model/uppaal.ecore#//types/Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChanceNode" eSuperTypes="../../org.muml.uppaal/model/uppaal.ecore#//templates/Location"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChanceEdge" eSuperTypes="../../org.muml.uppaal/model/uppaal.ecore#//templates/Edge">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weight" lowerBound="1"
+        eType="ecore:EClass ../../org.muml.uppaal/model/uppaal.ecore#//expressions/Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExponentialLocation" eSuperTypes="../../org.muml.uppaal/model/uppaal.ecore#//templates/Location">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exitRate" lowerBound="1"

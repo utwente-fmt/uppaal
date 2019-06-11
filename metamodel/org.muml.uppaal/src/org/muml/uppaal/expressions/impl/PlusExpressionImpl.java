@@ -59,6 +59,7 @@ public class PlusExpressionImpl extends ExpressionImpl implements PlusExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getConfirmedExpression() {
 		return confirmedExpression;
 	}
@@ -83,6 +84,7 @@ public class PlusExpressionImpl extends ExpressionImpl implements PlusExpression
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConfirmedExpression(Expression newConfirmedExpression) {
 		if (newConfirmedExpression != confirmedExpression) {
 			NotificationChain msgs = null;

@@ -18,7 +18,6 @@ import org.muml.uppaal.expressions.Expression;
 import org.muml.uppaal.expressions.ExpressionsPackage;
 import org.muml.uppaal.expressions.FunctionCallExpression;
 import org.muml.uppaal.expressions.IdentifierExpression;
-import org.muml.uppaal.expressions.IncrementDecrementExpression;
 import org.muml.uppaal.expressions.LiteralExpression;
 import org.muml.uppaal.expressions.LogicalExpression;
 import org.muml.uppaal.expressions.MinMaxExpression;
@@ -194,10 +193,17 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionsPackage.INCREMENT_DECREMENT_EXPRESSION: {
-				IncrementDecrementExpression incrementDecrementExpression = (IncrementDecrementExpression)theEObject;
-				T result = caseIncrementDecrementExpression(incrementDecrementExpression);
-				if (result == null) result = caseExpression(incrementDecrementExpression);
+			case ExpressionsPackage.POST_INCREMENT_DECREMENT_EXPRESSION: {
+				PostIncrementDecrementExpression postIncrementDecrementExpression = (PostIncrementDecrementExpression)theEObject;
+				T result = casePostIncrementDecrementExpression(postIncrementDecrementExpression);
+				if (result == null) result = caseExpression(postIncrementDecrementExpression);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExpressionsPackage.PRE_INCREMENT_DECREMENT_EXPRESSION: {
+				PreIncrementDecrementExpression preIncrementDecrementExpression = (PreIncrementDecrementExpression)theEObject;
+				T result = casePreIncrementDecrementExpression(preIncrementDecrementExpression);
+				if (result == null) result = caseExpression(preIncrementDecrementExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -455,17 +461,32 @@ public class ExpressionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Increment Decrement Expression</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Pre Increment Decrement Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Increment Decrement Expression</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Pre Increment Decrement Expression</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIncrementDecrementExpression(IncrementDecrementExpression object) {
+	public T casePreIncrementDecrementExpression(PreIncrementDecrementExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Post Increment Decrement Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Post Increment Decrement Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePostIncrementDecrementExpression(PostIncrementDecrementExpression object) {
 		return null;
 	}
 

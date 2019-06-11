@@ -24,9 +24,7 @@ import org.muml.uppaal.expressions.ExpressionsFactory;
 import org.muml.uppaal.expressions.ExpressionsPackage;
 import org.muml.uppaal.expressions.FunctionCallExpression;
 import org.muml.uppaal.expressions.IdentifierExpression;
-import org.muml.uppaal.expressions.IncrementDecrementExpression;
 import org.muml.uppaal.expressions.IncrementDecrementOperator;
-import org.muml.uppaal.expressions.IncrementDecrementPosition;
 import org.muml.uppaal.expressions.LiteralExpression;
 import org.muml.uppaal.expressions.LogicalExpression;
 import org.muml.uppaal.expressions.LogicalOperator;
@@ -96,7 +94,8 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 			case ExpressionsPackage.CONDITION_EXPRESSION: return createConditionExpression();
 			case ExpressionsPackage.SCOPED_IDENTIFIER_EXPRESSION: return createScopedIdentifierExpression();
 			case ExpressionsPackage.QUANTIFICATION_EXPRESSION: return createQuantificationExpression();
-			case ExpressionsPackage.INCREMENT_DECREMENT_EXPRESSION: return createIncrementDecrementExpression();
+			case ExpressionsPackage.POST_INCREMENT_DECREMENT_EXPRESSION: return createPostIncrementDecrementExpression();
+			case ExpressionsPackage.PRE_INCREMENT_DECREMENT_EXPRESSION: return createPreIncrementDecrementExpression();
 			case ExpressionsPackage.BIT_SHIFT_EXPRESSION: return createBitShiftExpression();
 			case ExpressionsPackage.MIN_MAX_EXPRESSION: return createMinMaxExpression();
 			case ExpressionsPackage.BITWISE_EXPRESSION: return createBitwiseExpression();
@@ -125,8 +124,6 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 				return createQuantifierFromString(eDataType, initialValue);
 			case ExpressionsPackage.INCREMENT_DECREMENT_OPERATOR:
 				return createIncrementDecrementOperatorFromString(eDataType, initialValue);
-			case ExpressionsPackage.INCREMENT_DECREMENT_POSITION:
-				return createIncrementDecrementPositionFromString(eDataType, initialValue);
 			case ExpressionsPackage.BIT_SHIFT_OPERATOR:
 				return createBitShiftOperatorFromString(eDataType, initialValue);
 			case ExpressionsPackage.MIN_MAX_OPERATOR:
@@ -158,8 +155,6 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 				return convertQuantifierToString(eDataType, instanceValue);
 			case ExpressionsPackage.INCREMENT_DECREMENT_OPERATOR:
 				return convertIncrementDecrementOperatorToString(eDataType, instanceValue);
-			case ExpressionsPackage.INCREMENT_DECREMENT_POSITION:
-				return convertIncrementDecrementPositionToString(eDataType, instanceValue);
 			case ExpressionsPackage.BIT_SHIFT_OPERATOR:
 				return convertBitShiftOperatorToString(eDataType, instanceValue);
 			case ExpressionsPackage.MIN_MAX_OPERATOR:
@@ -176,6 +171,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NegationExpression createNegationExpression() {
 		NegationExpressionImpl negationExpression = new NegationExpressionImpl();
 		return negationExpression;
@@ -186,6 +182,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PlusExpression createPlusExpression() {
 		PlusExpressionImpl plusExpression = new PlusExpressionImpl();
 		return plusExpression;
@@ -196,6 +193,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MinusExpression createMinusExpression() {
 		MinusExpressionImpl minusExpression = new MinusExpressionImpl();
 		return minusExpression;
@@ -206,6 +204,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssignmentExpression createAssignmentExpression() {
 		AssignmentExpressionImpl assignmentExpression = new AssignmentExpressionImpl();
 		return assignmentExpression;
@@ -216,6 +215,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentifierExpression createIdentifierExpression() {
 		IdentifierExpressionImpl identifierExpression = new IdentifierExpressionImpl();
 		return identifierExpression;
@@ -226,6 +226,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralExpression createLiteralExpression() {
 		LiteralExpressionImpl literalExpression = new LiteralExpressionImpl();
 		return literalExpression;
@@ -236,6 +237,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArithmeticExpression createArithmeticExpression() {
 		ArithmeticExpressionImpl arithmeticExpression = new ArithmeticExpressionImpl();
 		return arithmeticExpression;
@@ -246,6 +248,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LogicalExpression createLogicalExpression() {
 		LogicalExpressionImpl logicalExpression = new LogicalExpressionImpl();
 		return logicalExpression;
@@ -256,6 +259,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FunctionCallExpression createFunctionCallExpression() {
 		FunctionCallExpressionImpl functionCallExpression = new FunctionCallExpressionImpl();
 		return functionCallExpression;
@@ -266,6 +270,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CompareExpression createCompareExpression() {
 		CompareExpressionImpl compareExpression = new CompareExpressionImpl();
 		return compareExpression;
@@ -276,6 +281,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionExpression createConditionExpression() {
 		ConditionExpressionImpl conditionExpression = new ConditionExpressionImpl();
 		return conditionExpression;
@@ -286,6 +292,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ScopedIdentifierExpression createScopedIdentifierExpression() {
 		ScopedIdentifierExpressionImpl scopedIdentifierExpression = new ScopedIdentifierExpressionImpl();
 		return scopedIdentifierExpression;
@@ -296,6 +303,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QuantificationExpression createQuantificationExpression() {
 		QuantificationExpressionImpl quantificationExpression = new QuantificationExpressionImpl();
 		return quantificationExpression;
@@ -306,9 +314,10 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IncrementDecrementExpression createIncrementDecrementExpression() {
-		IncrementDecrementExpressionImpl incrementDecrementExpression = new IncrementDecrementExpressionImpl();
-		return incrementDecrementExpression;
+	@Override
+	public PreIncrementDecrementExpression createPreIncrementDecrementExpression() {
+		PreIncrementDecrementExpressionImpl preIncrementDecrementExpression = new PreIncrementDecrementExpressionImpl();
+		return preIncrementDecrementExpression;
 	}
 
 	/**
@@ -316,6 +325,18 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public PostIncrementDecrementExpression createPostIncrementDecrementExpression() {
+		PostIncrementDecrementExpressionImpl postIncrementDecrementExpression = new PostIncrementDecrementExpressionImpl();
+		return postIncrementDecrementExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public BitShiftExpression createBitShiftExpression() {
 		BitShiftExpressionImpl bitShiftExpression = new BitShiftExpressionImpl();
 		return bitShiftExpression;
@@ -326,6 +347,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MinMaxExpression createMinMaxExpression() {
 		MinMaxExpressionImpl minMaxExpression = new MinMaxExpressionImpl();
 		return minMaxExpression;
@@ -336,6 +358,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BitwiseExpression createBitwiseExpression() {
 		BitwiseExpressionImpl bitwiseExpression = new BitwiseExpressionImpl();
 		return bitwiseExpression;
@@ -466,26 +489,6 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IncrementDecrementPosition createIncrementDecrementPositionFromString(EDataType eDataType, String initialValue) {
-		IncrementDecrementPosition result = IncrementDecrementPosition.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIncrementDecrementPositionToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public BitShiftOperator createBitShiftOperatorFromString(EDataType eDataType, String initialValue) {
 		BitShiftOperator result = BitShiftOperator.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -546,6 +549,7 @@ public class ExpressionsFactoryImpl extends EFactoryImpl implements ExpressionsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpressionsPackage getExpressionsPackage() {
 		return (ExpressionsPackage)getEPackage();
 	}

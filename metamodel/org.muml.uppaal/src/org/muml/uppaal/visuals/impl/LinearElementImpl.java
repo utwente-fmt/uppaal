@@ -63,6 +63,7 @@ public abstract class LinearElementImpl extends EObjectImpl implements LinearEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Point> getBendPoint() {
 		if (bendPoint == null) {
 			bendPoint = new EObjectContainmentEList<Point>(Point.class, this, VisualsPackage.LINEAR_ELEMENT__BEND_POINT);

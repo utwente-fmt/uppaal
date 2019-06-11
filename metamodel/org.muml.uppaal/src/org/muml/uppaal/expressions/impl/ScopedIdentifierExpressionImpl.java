@@ -71,6 +71,7 @@ public class ScopedIdentifierExpressionImpl extends ExpressionImpl implements Sc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getScope() {
 		return scope;
 	}
@@ -95,6 +96,7 @@ public class ScopedIdentifierExpressionImpl extends ExpressionImpl implements Sc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScope(Expression newScope) {
 		if (newScope != scope) {
 			NotificationChain msgs = null;
@@ -114,6 +116,7 @@ public class ScopedIdentifierExpressionImpl extends ExpressionImpl implements Sc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentifierExpression getIdentifier() {
 		return identifier;
 	}
@@ -138,6 +141,7 @@ public class ScopedIdentifierExpressionImpl extends ExpressionImpl implements Sc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(IdentifierExpression newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;

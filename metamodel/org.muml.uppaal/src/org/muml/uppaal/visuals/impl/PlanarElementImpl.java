@@ -60,6 +60,7 @@ public abstract class PlanarElementImpl extends EObjectImpl implements PlanarEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Point getPosition() {
 		return position;
 	}
@@ -84,6 +85,7 @@ public abstract class PlanarElementImpl extends EObjectImpl implements PlanarEle
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosition(Point newPosition) {
 		if (newPosition != position) {
 			NotificationChain msgs = null;

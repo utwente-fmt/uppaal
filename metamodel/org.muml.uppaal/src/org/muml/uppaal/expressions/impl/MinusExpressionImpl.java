@@ -59,6 +59,7 @@ public class MinusExpressionImpl extends ExpressionImpl implements MinusExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getInvertedExpression() {
 		return invertedExpression;
 	}
@@ -83,6 +84,7 @@ public class MinusExpressionImpl extends ExpressionImpl implements MinusExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInvertedExpression(Expression newInvertedExpression) {
 		if (newInvertedExpression != invertedExpression) {
 			NotificationChain msgs = null;

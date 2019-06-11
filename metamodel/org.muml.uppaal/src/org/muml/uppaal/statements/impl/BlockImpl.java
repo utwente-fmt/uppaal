@@ -76,6 +76,7 @@ public class BlockImpl extends StatementImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LocalDeclarations getDeclarations() {
 		return declarations;
 	}
@@ -100,6 +101,7 @@ public class BlockImpl extends StatementImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclarations(LocalDeclarations newDeclarations) {
 		if (newDeclarations != declarations) {
 			NotificationChain msgs = null;
@@ -119,6 +121,7 @@ public class BlockImpl extends StatementImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Statement> getStatement() {
 		if (statement == null) {
 			statement = new EObjectContainmentEList<Statement>(Statement.class, this, StatementsPackage.BLOCK__STATEMENT);

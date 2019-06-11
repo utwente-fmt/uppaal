@@ -198,7 +198,12 @@ public class ReturnStatementItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(StatementsPackage.Literals.RETURN_STATEMENT__RETURN_EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StatementsPackage.Literals.RETURN_STATEMENT__RETURN_EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

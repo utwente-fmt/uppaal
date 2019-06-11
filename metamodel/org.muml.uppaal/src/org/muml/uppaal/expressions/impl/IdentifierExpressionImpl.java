@@ -27,6 +27,7 @@ import org.muml.uppaal.expressions.IdentifierExpression;
  * <ul>
  *   <li>{@link org.muml.uppaal.expressions.impl.IdentifierExpressionImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.muml.uppaal.expressions.impl.IdentifierExpressionImpl#getIndex <em>Index</em>}</li>
+ *   <li>{@link org.muml.uppaal.expressions.impl.IdentifierExpressionImpl#isClockRate <em>Clock Rate</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,6 +54,26 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 	protected EList<Expression> index;
 
 	/**
+	 * The default value of the '{@link #isClockRate() <em>Clock Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isClockRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CLOCK_RATE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isClockRate() <em>Clock Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isClockRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean clockRate = CLOCK_RATE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -76,6 +97,7 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getIdentifier() {
 		if (identifier != null && identifier.eIsProxy()) {
 			InternalEObject oldIdentifier = (InternalEObject)identifier;
@@ -102,6 +124,7 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdentifier(NamedElement newIdentifier) {
 		NamedElement oldIdentifier = identifier;
 		identifier = newIdentifier;
@@ -114,11 +137,35 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getIndex() {
 		if (index == null) {
 			index = new EObjectContainmentEList<Expression>(Expression.class, this, ExpressionsPackage.IDENTIFIER_EXPRESSION__INDEX);
 		}
 		return index;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isClockRate() {
+		return clockRate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClockRate(boolean newClockRate) {
+		boolean oldClockRate = clockRate;
+		clockRate = newClockRate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE, oldClockRate, clockRate));
 	}
 
 	/**
@@ -148,6 +195,8 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 				return basicGetIdentifier();
 			case ExpressionsPackage.IDENTIFIER_EXPRESSION__INDEX:
 				return getIndex();
+			case ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE:
+				return isClockRate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +217,9 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 				getIndex().clear();
 				getIndex().addAll((Collection<? extends Expression>)newValue);
 				return;
+			case ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE:
+				setClockRate((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -186,6 +238,9 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 			case ExpressionsPackage.IDENTIFIER_EXPRESSION__INDEX:
 				getIndex().clear();
 				return;
+			case ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE:
+				setClockRate(CLOCK_RATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,8 +257,26 @@ public class IdentifierExpressionImpl extends ExpressionImpl implements Identifi
 				return identifier != null;
 			case ExpressionsPackage.IDENTIFIER_EXPRESSION__INDEX:
 				return index != null && !index.isEmpty();
+			case ExpressionsPackage.IDENTIFIER_EXPRESSION__CLOCK_RATE:
+				return clockRate != CLOCK_RATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (clockRate: ");
+		result.append(clockRate);
+		result.append(')');
+		return result.toString();
 	}
 
 } //IdentifierExpressionImpl

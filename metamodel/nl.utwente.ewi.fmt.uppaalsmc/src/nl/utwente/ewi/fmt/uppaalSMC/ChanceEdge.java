@@ -2,6 +2,7 @@
  */
 package nl.utwente.ewi.fmt.uppaalSMC;
 
+import org.muml.uppaal.expressions.Expression;
 import org.muml.uppaal.templates.Edge;
 
 /**
@@ -22,29 +23,29 @@ import org.muml.uppaal.templates.Edge;
  */
 public interface ChanceEdge extends Edge {
 	/**
-	 * Returns the value of the '<em><b>Weight</b></em>' attribute.
+	 * Returns the value of the '<em><b>Weight</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Weight</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Weight</em>' attribute.
-	 * @see #setWeight(int)
+	 * @return the value of the '<em>Weight</em>' containment reference.
+	 * @see #setWeight(Expression)
 	 * @see nl.utwente.ewi.fmt.uppaalSMC.UppaalSMCPackage#getChanceEdge_Weight()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	int getWeight();
+	Expression getWeight();
 
 	/**
-	 * Sets the value of the '{@link nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge#getWeight <em>Weight</em>}' attribute.
+	 * Sets the value of the '{@link nl.utwente.ewi.fmt.uppaalSMC.ChanceEdge#getWeight <em>Weight</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Weight</em>' attribute.
+	 * @param value the new value of the '<em>Weight</em>' containment reference.
 	 * @see #getWeight()
 	 * @generated
 	 */
-	void setWeight(int value);
+	void setWeight(Expression value);
 
 } // ChanceEdge

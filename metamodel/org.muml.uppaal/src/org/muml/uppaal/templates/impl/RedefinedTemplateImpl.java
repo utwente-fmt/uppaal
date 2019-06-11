@@ -63,6 +63,7 @@ public class RedefinedTemplateImpl extends AbstractTemplateImpl implements Redef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AbstractTemplate getReferredTemplate() {
 		if (referredTemplate != null && referredTemplate.eIsProxy()) {
 			InternalEObject oldReferredTemplate = (InternalEObject)referredTemplate;
@@ -89,6 +90,7 @@ public class RedefinedTemplateImpl extends AbstractTemplateImpl implements Redef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferredTemplate(AbstractTemplate newReferredTemplate) {
 		AbstractTemplate oldReferredTemplate = referredTemplate;
 		referredTemplate = newReferredTemplate;
@@ -101,6 +103,7 @@ public class RedefinedTemplateImpl extends AbstractTemplateImpl implements Redef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateDeclaration getDeclaration() {
 		if (eContainerFeatureID() != TemplatesPackage.REDEFINED_TEMPLATE__DECLARATION) return null;
 		return (TemplateDeclaration)eInternalContainer();
@@ -121,6 +124,7 @@ public class RedefinedTemplateImpl extends AbstractTemplateImpl implements Redef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclaration(TemplateDeclaration newDeclaration) {
 		if (newDeclaration != eInternalContainer() || (eContainerFeatureID() != TemplatesPackage.REDEFINED_TEMPLATE__DECLARATION && newDeclaration != null)) {
 			if (EcoreUtil.isAncestor(this, newDeclaration))

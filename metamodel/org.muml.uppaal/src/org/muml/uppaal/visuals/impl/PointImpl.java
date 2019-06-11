@@ -32,7 +32,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int X_EDEFAULT = 0;
+	protected static final String X_EDEFAULT = "0";
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -42,7 +42,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected int x = X_EDEFAULT;
+	protected String x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -52,7 +52,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int Y_EDEFAULT = 0;
+	protected static final String Y_EDEFAULT = "0";
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -62,7 +62,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected int y = Y_EDEFAULT;
+	protected String y = Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,7 +88,8 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getX() {
+	@Override
+	public String getX() {
 		return x;
 	}
 
@@ -97,8 +98,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(int newX) {
-		int oldX = x;
+	@Override
+	public void setX(String newX) {
+		String oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, VisualsPackage.POINT__X, oldX, x));
@@ -109,7 +111,8 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getY() {
+	@Override
+	public String getY() {
 		return y;
 	}
 
@@ -118,8 +121,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(int newY) {
-		int oldY = y;
+	@Override
+	public void setY(String newY) {
+		String oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, VisualsPackage.POINT__Y, oldY, y));
@@ -150,10 +154,10 @@ public class PointImpl extends EObjectImpl implements Point {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case VisualsPackage.POINT__X:
-				setX((Integer)newValue);
+				setX((String)newValue);
 				return;
 			case VisualsPackage.POINT__Y:
-				setY((Integer)newValue);
+				setY((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,9 +190,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case VisualsPackage.POINT__X:
-				return x != X_EDEFAULT;
+				return X_EDEFAULT == null ? x != null : !X_EDEFAULT.equals(x);
 			case VisualsPackage.POINT__Y:
-				return y != Y_EDEFAULT;
+				return Y_EDEFAULT == null ? y != null : !Y_EDEFAULT.equals(y);
 		}
 		return super.eIsSet(featureID);
 	}

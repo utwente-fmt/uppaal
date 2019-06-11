@@ -82,6 +82,7 @@ public class SynchronizationImpl extends EObjectImpl implements Synchronization 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IdentifierExpression getChannelExpression() {
 		return channelExpression;
 	}
@@ -106,6 +107,7 @@ public class SynchronizationImpl extends EObjectImpl implements Synchronization 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChannelExpression(IdentifierExpression newChannelExpression) {
 		if (newChannelExpression != channelExpression) {
 			NotificationChain msgs = null;
@@ -125,6 +127,7 @@ public class SynchronizationImpl extends EObjectImpl implements Synchronization 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SynchronizationKind getKind() {
 		return kind;
 	}
@@ -134,6 +137,7 @@ public class SynchronizationImpl extends EObjectImpl implements Synchronization 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(SynchronizationKind newKind) {
 		SynchronizationKind oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;

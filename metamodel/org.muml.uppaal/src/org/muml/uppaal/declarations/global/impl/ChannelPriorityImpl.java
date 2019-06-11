@@ -63,6 +63,7 @@ public class ChannelPriorityImpl extends EObjectImpl implements ChannelPriority 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ChannelPriorityItem> getItem() {
 		if (item == null) {
 			item = new EObjectContainmentEList<ChannelPriorityItem>(ChannelPriorityItem.class, this, GlobalPackage.CHANNEL_PRIORITY__ITEM);

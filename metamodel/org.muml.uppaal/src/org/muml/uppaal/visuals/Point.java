@@ -35,12 +35,12 @@ public interface Point extends EObject {
 	 * The horizontal component of the point.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(int)
+	 * @see #setX(String)
 	 * @see org.muml.uppaal.visuals.VisualsPackage#getPoint_X()
 	 * @model default="0" required="true"
 	 * @generated
 	 */
-	int getX();
+	String getX();
 
 	/**
 	 * Sets the value of the '{@link org.muml.uppaal.visuals.Point#getX <em>X</em>}' attribute.
@@ -50,7 +50,7 @@ public interface Point extends EObject {
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(int value);
+	void setX(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -61,12 +61,12 @@ public interface Point extends EObject {
 	 * The vertical component of the point.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(int)
+	 * @see #setY(String)
 	 * @see org.muml.uppaal.visuals.VisualsPackage#getPoint_Y()
 	 * @model default="0" required="true"
 	 * @generated
 	 */
-	int getY();
+	String getY();
 
 	/**
 	 * Sets the value of the '{@link org.muml.uppaal.visuals.Point#getY <em>Y</em>}' attribute.
@@ -76,6 +76,6 @@ public interface Point extends EObject {
 	 * @see #getY()
 	 * @generated
 	 */
-	void setY(int value);
+	void setY(String value);
 
 } // Point

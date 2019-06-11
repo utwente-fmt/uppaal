@@ -89,6 +89,7 @@ public class FunctionImpl extends NamedElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getReturnType() {
 		return returnType;
 	}
@@ -113,6 +114,7 @@ public class FunctionImpl extends NamedElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnType(TypeDefinition newReturnType) {
 		if (newReturnType != returnType) {
 			NotificationChain msgs = null;
@@ -132,6 +134,7 @@ public class FunctionImpl extends NamedElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBlock() {
 		return block;
 	}
@@ -156,6 +159,7 @@ public class FunctionImpl extends NamedElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBlock(Block newBlock) {
 		if (newBlock != block) {
 			NotificationChain msgs = null;
@@ -175,6 +179,7 @@ public class FunctionImpl extends NamedElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, DeclarationsPackage.FUNCTION__PARAMETER);

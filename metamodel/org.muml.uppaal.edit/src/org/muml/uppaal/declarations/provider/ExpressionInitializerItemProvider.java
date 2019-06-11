@@ -198,7 +198,12 @@ public class ExpressionInitializerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(DeclarationsPackage.Literals.EXPRESSION_INITIALIZER__EXPRESSION,
-				 ExpressionsFactory.eINSTANCE.createIncrementDecrementExpression()));
+				 ExpressionsFactory.eINSTANCE.createPreIncrementDecrementExpression()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DeclarationsPackage.Literals.EXPRESSION_INITIALIZER__EXPRESSION,
+				 ExpressionsFactory.eINSTANCE.createPostIncrementDecrementExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter

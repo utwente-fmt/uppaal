@@ -112,6 +112,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDefinition getTypeDefinition() {
 		return typeDefinition;
 	}
@@ -136,6 +137,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeDefinition(TypeDefinition newTypeDefinition) {
 		if (newTypeDefinition != typeDefinition) {
 			NotificationChain msgs = null;
@@ -155,6 +157,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Variable> getVariable() {
 		if (variable == null) {
 			variable = new EObjectContainmentWithInverseEList<Variable>(Variable.class, this, ExpressionsPackage.QUANTIFICATION_EXPRESSION__VARIABLE, DeclarationsPackage.VARIABLE__CONTAINER);
@@ -167,6 +170,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Quantifier getQuantifier() {
 		return quantifier;
 	}
@@ -176,6 +180,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQuantifier(Quantifier newQuantifier) {
 		Quantifier oldQuantifier = quantifier;
 		quantifier = newQuantifier == null ? QUANTIFIER_EDEFAULT : newQuantifier;
@@ -188,6 +193,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getExpression() {
 		return expression;
 	}
@@ -212,6 +218,7 @@ public class QuantificationExpressionImpl extends ExpressionImpl implements Quan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(Expression newExpression) {
 		if (newExpression != expression) {
 			NotificationChain msgs = null;

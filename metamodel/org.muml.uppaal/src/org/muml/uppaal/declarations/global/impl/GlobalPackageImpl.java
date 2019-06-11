@@ -163,6 +163,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 		EValidator.Registry.INSTANCE.put
 			(theGlobalPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return GlobalValidator.INSTANCE;
 				 }
@@ -181,6 +182,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChannelPriority() {
 		return channelPriorityEClass;
 	}
@@ -190,6 +192,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChannelPriority_Item() {
 		return (EReference)channelPriorityEClass.getEStructuralFeatures().get(0);
 	}
@@ -199,6 +202,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChannelPriorityItem() {
 		return channelPriorityItemEClass;
 	}
@@ -208,6 +212,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getChannelList() {
 		return channelListEClass;
 	}
@@ -217,6 +222,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getChannelList_ChannelExpression() {
 		return (EReference)channelListEClass.getEStructuralFeatures().get(0);
 	}
@@ -226,6 +232,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDefaultChannelPriority() {
 		return defaultChannelPriorityEClass;
 	}
@@ -235,6 +242,7 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GlobalFactory getGlobalFactory() {
 		return (GlobalFactory)getEFactoryInstance();
 	}
@@ -359,6 +367,13 @@ public class GlobalPackageImpl extends EPackageImpl implements GlobalPackage {
 	 */
 	protected void createOCLAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (channelPriorityEClass,
+		   source,
+		   new String[] {
+			   "AtMostOneDefaultItem", "self.item->select(oclIsKindOf(DefaultChannelPriority))->size() <= 1",
+			   "EachChannelContainedAtMostOnce", "self.item->select(oclIsKindOf(ChannelList)).oclAsType(ChannelList)->collect(channelExpression)->isUnique(variable)"
+		   });
 		addAnnotation
 		  (channelListEClass,
 		   source,

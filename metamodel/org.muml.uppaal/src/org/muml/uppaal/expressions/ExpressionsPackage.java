@@ -275,13 +275,22 @@ public interface ExpressionsPackage extends EPackage {
 	int IDENTIFIER_EXPRESSION__INDEX = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Clock Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFIER_EXPRESSION__CLOCK_RATE = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Identifier Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFIER_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+	int IDENTIFIER_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.impl.LiteralExpressionImpl <em>Literal Expression</em>}' class.
@@ -625,14 +634,24 @@ public interface ExpressionsPackage extends EPackage {
 	int QUANTIFICATION_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link org.muml.uppaal.expressions.impl.IncrementDecrementExpressionImpl <em>Increment Decrement Expression</em>}' class.
+	 * The meta object id for the '{@link org.muml.uppaal.expressions.impl.PreIncrementDecrementExpressionImpl <em>Pre Increment Decrement Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.uppaal.expressions.impl.IncrementDecrementExpressionImpl
-	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getIncrementDecrementExpression()
+	 * @see org.muml.uppaal.expressions.impl.PreIncrementDecrementExpressionImpl
+	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getPreIncrementDecrementExpression()
 	 * @generated
 	 */
-	int INCREMENT_DECREMENT_EXPRESSION = 15;
+	int PRE_INCREMENT_DECREMENT_EXPRESSION = 16;
+
+	/**
+	 * The meta object id for the '{@link org.muml.uppaal.expressions.impl.PostIncrementDecrementExpressionImpl <em>Post Increment Decrement Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.uppaal.expressions.impl.PostIncrementDecrementExpressionImpl
+	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getPostIncrementDecrementExpression()
+	 * @generated
+	 */
+	int POST_INCREMENT_DECREMENT_EXPRESSION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -641,16 +660,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Position</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INCREMENT_DECREMENT_EXPRESSION__POSITION = EXPRESSION_FEATURE_COUNT + 1;
+	int POST_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -659,16 +669,43 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT_DECREMENT_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 2;
+	int POST_INCREMENT_DECREMENT_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Increment Decrement Expression</em>' class.
+	 * The number of structural features of the '<em>Post Increment Decrement Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT_DECREMENT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+	int POST_INCREMENT_DECREMENT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE_INCREMENT_DECREMENT_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Pre Increment Decrement Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRE_INCREMENT_DECREMENT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.impl.BitShiftExpressionImpl <em>Bit Shift Expression</em>}' class.
@@ -678,7 +715,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getBitShiftExpression()
 	 * @generated
 	 */
-	int BIT_SHIFT_EXPRESSION = 16;
+	int BIT_SHIFT_EXPRESSION = 17;
 
 	/**
 	 * The feature id for the '<em><b>First Expr</b></em>' containment reference.
@@ -724,7 +761,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getMinMaxExpression()
 	 * @generated
 	 */
-	int MIN_MAX_EXPRESSION = 17;
+	int MIN_MAX_EXPRESSION = 18;
 
 	/**
 	 * The feature id for the '<em><b>First Expr</b></em>' containment reference.
@@ -770,7 +807,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getBitwiseExpression()
 	 * @generated
 	 */
-	int BITWISE_EXPRESSION = 18;
+	int BITWISE_EXPRESSION = 19;
 
 	/**
 	 * The feature id for the '<em><b>First Expr</b></em>' containment reference.
@@ -816,7 +853,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getAssignmentOperator()
 	 * @generated
 	 */
-	int ASSIGNMENT_OPERATOR = 19;
+	int ASSIGNMENT_OPERATOR = 20;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
@@ -826,7 +863,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 20;
+	int ARITHMETIC_OPERATOR = 21;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.LogicalOperator <em>Logical Operator</em>}' enum.
@@ -836,7 +873,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getLogicalOperator()
 	 * @generated
 	 */
-	int LOGICAL_OPERATOR = 21;
+	int LOGICAL_OPERATOR = 22;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.CompareOperator <em>Compare Operator</em>}' enum.
@@ -846,7 +883,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getCompareOperator()
 	 * @generated
 	 */
-	int COMPARE_OPERATOR = 22;
+	int COMPARE_OPERATOR = 23;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.Quantifier <em>Quantifier</em>}' enum.
@@ -856,7 +893,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getQuantifier()
 	 * @generated
 	 */
-	int QUANTIFIER = 23;
+	int QUANTIFIER = 24;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.IncrementDecrementOperator <em>Increment Decrement Operator</em>}' enum.
@@ -866,17 +903,7 @@ public interface ExpressionsPackage extends EPackage {
 	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getIncrementDecrementOperator()
 	 * @generated
 	 */
-	int INCREMENT_DECREMENT_OPERATOR = 24;
-
-	/**
-	 * The meta object id for the '{@link org.muml.uppaal.expressions.IncrementDecrementPosition <em>Increment Decrement Position</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.uppaal.expressions.IncrementDecrementPosition
-	 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getIncrementDecrementPosition()
-	 * @generated
-	 */
-	int INCREMENT_DECREMENT_POSITION = 25;
+	int INCREMENT_DECREMENT_OPERATOR = 25;
 
 	/**
 	 * The meta object id for the '{@link org.muml.uppaal.expressions.BitShiftOperator <em>Bit Shift Operator</em>}' enum.
@@ -1066,6 +1093,17 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIdentifierExpression_Index();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.uppaal.expressions.IdentifierExpression#isClockRate <em>Clock Rate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clock Rate</em>'.
+	 * @see org.muml.uppaal.expressions.IdentifierExpression#isClockRate()
+	 * @see #getIdentifierExpression()
+	 * @generated
+	 */
+	EAttribute getIdentifierExpression_ClockRate();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.uppaal.expressions.LiteralExpression <em>Literal Expression</em>}'.
@@ -1291,47 +1329,68 @@ public interface ExpressionsPackage extends EPackage {
 	EReference getQuantificationExpression_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.uppaal.expressions.IncrementDecrementExpression <em>Increment Decrement Expression</em>}'.
+	 * Returns the meta object for class '{@link org.muml.uppaal.expressions.PreIncrementDecrementExpression <em>Pre Increment Decrement Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Increment Decrement Expression</em>'.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementExpression
+	 * @return the meta object for class '<em>Pre Increment Decrement Expression</em>'.
+	 * @see org.muml.uppaal.expressions.PreIncrementDecrementExpression
 	 * @generated
 	 */
-	EClass getIncrementDecrementExpression();
+	EClass getPreIncrementDecrementExpression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.uppaal.expressions.IncrementDecrementExpression#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.uppaal.expressions.PreIncrementDecrementExpression#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementExpression#getExpression()
-	 * @see #getIncrementDecrementExpression()
+	 * @see org.muml.uppaal.expressions.PreIncrementDecrementExpression#getExpression()
+	 * @see #getPreIncrementDecrementExpression()
 	 * @generated
 	 */
-	EReference getIncrementDecrementExpression_Expression();
+	EReference getPreIncrementDecrementExpression_Expression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.uppaal.expressions.IncrementDecrementExpression#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Position</em>'.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementExpression#getPosition()
-	 * @see #getIncrementDecrementExpression()
-	 * @generated
-	 */
-	EAttribute getIncrementDecrementExpression_Position();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.muml.uppaal.expressions.IncrementDecrementExpression#getOperator <em>Operator</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.uppaal.expressions.PreIncrementDecrementExpression#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Operator</em>'.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementExpression#getOperator()
-	 * @see #getIncrementDecrementExpression()
+	 * @see org.muml.uppaal.expressions.PreIncrementDecrementExpression#getOperator()
+	 * @see #getPreIncrementDecrementExpression()
 	 * @generated
 	 */
-	EAttribute getIncrementDecrementExpression_Operator();
+	EAttribute getPreIncrementDecrementExpression_Operator();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.uppaal.expressions.PostIncrementDecrementExpression <em>Post Increment Decrement Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Post Increment Decrement Expression</em>'.
+	 * @see org.muml.uppaal.expressions.PostIncrementDecrementExpression
+	 * @generated
+	 */
+	EClass getPostIncrementDecrementExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.uppaal.expressions.PostIncrementDecrementExpression#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see org.muml.uppaal.expressions.PostIncrementDecrementExpression#getExpression()
+	 * @see #getPostIncrementDecrementExpression()
+	 * @generated
+	 */
+	EReference getPostIncrementDecrementExpression_Expression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.uppaal.expressions.PostIncrementDecrementExpression#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see org.muml.uppaal.expressions.PostIncrementDecrementExpression#getOperator()
+	 * @see #getPostIncrementDecrementExpression()
+	 * @generated
+	 */
+	EAttribute getPostIncrementDecrementExpression_Operator();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.uppaal.expressions.BitShiftExpression <em>Bit Shift Expression</em>}'.
@@ -1455,16 +1514,6 @@ public interface ExpressionsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getIncrementDecrementOperator();
-
-	/**
-	 * Returns the meta object for enum '{@link org.muml.uppaal.expressions.IncrementDecrementPosition <em>Increment Decrement Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Increment Decrement Position</em>'.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementPosition
-	 * @generated
-	 */
-	EEnum getIncrementDecrementPosition();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.uppaal.expressions.BitShiftOperator <em>Bit Shift Operator</em>}'.
@@ -1653,6 +1702,14 @@ public interface ExpressionsPackage extends EPackage {
 		EReference IDENTIFIER_EXPRESSION__INDEX = eINSTANCE.getIdentifierExpression_Index();
 
 		/**
+		 * The meta object literal for the '<em><b>Clock Rate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IDENTIFIER_EXPRESSION__CLOCK_RATE = eINSTANCE.getIdentifierExpression_ClockRate();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.uppaal.expressions.impl.LiteralExpressionImpl <em>Literal Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1837,14 +1894,14 @@ public interface ExpressionsPackage extends EPackage {
 		EReference QUANTIFICATION_EXPRESSION__EXPRESSION = eINSTANCE.getQuantificationExpression_Expression();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.uppaal.expressions.impl.IncrementDecrementExpressionImpl <em>Increment Decrement Expression</em>}' class.
+		 * The meta object literal for the '{@link org.muml.uppaal.expressions.impl.PreIncrementDecrementExpressionImpl <em>Pre Increment Decrement Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.uppaal.expressions.impl.IncrementDecrementExpressionImpl
-		 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getIncrementDecrementExpression()
+		 * @see org.muml.uppaal.expressions.impl.PreIncrementDecrementExpressionImpl
+		 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getPreIncrementDecrementExpression()
 		 * @generated
 		 */
-		EClass INCREMENT_DECREMENT_EXPRESSION = eINSTANCE.getIncrementDecrementExpression();
+		EClass PRE_INCREMENT_DECREMENT_EXPRESSION = eINSTANCE.getPreIncrementDecrementExpression();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -1852,15 +1909,7 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = eINSTANCE.getIncrementDecrementExpression_Expression();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INCREMENT_DECREMENT_EXPRESSION__POSITION = eINSTANCE.getIncrementDecrementExpression_Position();
+		EReference PRE_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = eINSTANCE.getPreIncrementDecrementExpression_Expression();
 
 		/**
 		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
@@ -1868,7 +1917,33 @@ public interface ExpressionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INCREMENT_DECREMENT_EXPRESSION__OPERATOR = eINSTANCE.getIncrementDecrementExpression_Operator();
+		EAttribute PRE_INCREMENT_DECREMENT_EXPRESSION__OPERATOR = eINSTANCE.getPreIncrementDecrementExpression_Operator();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.uppaal.expressions.impl.PostIncrementDecrementExpressionImpl <em>Post Increment Decrement Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.uppaal.expressions.impl.PostIncrementDecrementExpressionImpl
+		 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getPostIncrementDecrementExpression()
+		 * @generated
+		 */
+		EClass POST_INCREMENT_DECREMENT_EXPRESSION = eINSTANCE.getPostIncrementDecrementExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POST_INCREMENT_DECREMENT_EXPRESSION__EXPRESSION = eINSTANCE.getPostIncrementDecrementExpression_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute POST_INCREMENT_DECREMENT_EXPRESSION__OPERATOR = eINSTANCE.getPostIncrementDecrementExpression_Operator();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.uppaal.expressions.impl.BitShiftExpressionImpl <em>Bit Shift Expression</em>}' class.
@@ -1983,16 +2058,6 @@ public interface ExpressionsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum INCREMENT_DECREMENT_OPERATOR = eINSTANCE.getIncrementDecrementOperator();
-
-		/**
-		 * The meta object literal for the '{@link org.muml.uppaal.expressions.IncrementDecrementPosition <em>Increment Decrement Position</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.uppaal.expressions.IncrementDecrementPosition
-		 * @see org.muml.uppaal.expressions.impl.ExpressionsPackageImpl#getIncrementDecrementPosition()
-		 * @generated
-		 */
-		EEnum INCREMENT_DECREMENT_POSITION = eINSTANCE.getIncrementDecrementPosition();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.uppaal.expressions.BitShiftOperator <em>Bit Shift Operator</em>}' enum.

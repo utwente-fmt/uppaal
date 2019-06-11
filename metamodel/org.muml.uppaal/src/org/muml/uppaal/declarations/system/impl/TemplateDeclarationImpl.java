@@ -78,6 +78,7 @@ public class TemplateDeclarationImpl extends DeclarationImpl implements Template
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinedTemplate getDeclaredTemplate() {
 		return declaredTemplate;
 	}
@@ -102,6 +103,7 @@ public class TemplateDeclarationImpl extends DeclarationImpl implements Template
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclaredTemplate(RedefinedTemplate newDeclaredTemplate) {
 		if (newDeclaredTemplate != declaredTemplate) {
 			NotificationChain msgs = null;
@@ -121,6 +123,7 @@ public class TemplateDeclarationImpl extends DeclarationImpl implements Template
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArgument() {
 		if (argument == null) {
 			argument = new EObjectContainmentEList<Expression>(Expression.class, this, SystemPackage.TEMPLATE_DECLARATION__ARGUMENT);

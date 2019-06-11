@@ -211,6 +211,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 		EValidator.Registry.INSTANCE.put
 			(theStatementsPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return StatementsValidator.INSTANCE;
 				 }
@@ -229,6 +230,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatement() {
 		return statementEClass;
 	}
@@ -238,6 +240,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlock() {
 		return blockEClass;
 	}
@@ -247,6 +250,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Declarations() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(0);
 	}
@@ -256,6 +260,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Statement() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(1);
 	}
@@ -265,6 +270,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEmptyStatement() {
 		return emptyStatementEClass;
 	}
@@ -274,6 +280,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getForLoop() {
 		return forLoopEClass;
 	}
@@ -283,6 +290,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForLoop_Initialization() {
 		return (EReference)forLoopEClass.getEStructuralFeatures().get(0);
 	}
@@ -292,6 +300,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForLoop_Condition() {
 		return (EReference)forLoopEClass.getEStructuralFeatures().get(1);
 	}
@@ -301,6 +310,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForLoop_Iteration() {
 		return (EReference)forLoopEClass.getEStructuralFeatures().get(2);
 	}
@@ -310,6 +320,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForLoop_Statement() {
 		return (EReference)forLoopEClass.getEStructuralFeatures().get(3);
 	}
@@ -319,6 +330,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIteration() {
 		return iterationEClass;
 	}
@@ -328,6 +340,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIteration_Statement() {
 		return (EReference)iterationEClass.getEStructuralFeatures().get(0);
 	}
@@ -337,6 +350,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWhileLoop() {
 		return whileLoopEClass;
 	}
@@ -346,6 +360,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileLoop_Expression() {
 		return (EReference)whileLoopEClass.getEStructuralFeatures().get(0);
 	}
@@ -355,6 +370,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileLoop_Statement() {
 		return (EReference)whileLoopEClass.getEStructuralFeatures().get(1);
 	}
@@ -364,6 +380,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDoWhileLoop() {
 		return doWhileLoopEClass;
 	}
@@ -373,6 +390,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDoWhileLoop_Statement() {
 		return (EReference)doWhileLoopEClass.getEStructuralFeatures().get(0);
 	}
@@ -382,6 +400,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDoWhileLoop_Expression() {
 		return (EReference)doWhileLoopEClass.getEStructuralFeatures().get(1);
 	}
@@ -391,6 +410,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIfStatement() {
 		return ifStatementEClass;
 	}
@@ -400,6 +420,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_IfExpression() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -409,6 +430,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ThenStatement() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(1);
 	}
@@ -418,6 +440,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ElseStatement() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(2);
 	}
@@ -427,6 +450,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getReturnStatement() {
 		return returnStatementEClass;
 	}
@@ -436,6 +460,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getReturnStatement_ReturnExpression() {
 		return (EReference)returnStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -445,6 +470,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpressionStatement() {
 		return expressionStatementEClass;
 	}
@@ -454,6 +480,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExpressionStatement_Expression() {
 		return (EReference)expressionStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -463,6 +490,7 @@ public class StatementsPackageImpl extends EPackageImpl implements StatementsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StatementsFactory getStatementsFactory() {
 		return (StatementsFactory)getEFactoryInstance();
 	}

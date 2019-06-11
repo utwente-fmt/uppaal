@@ -67,6 +67,7 @@ public class LogicalExpressionImpl extends BinaryExpressionImpl implements Logic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LogicalOperator getOperator() {
 		return operator;
 	}
@@ -76,6 +77,7 @@ public class LogicalExpressionImpl extends BinaryExpressionImpl implements Logic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperator(LogicalOperator newOperator) {
 		LogicalOperator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;

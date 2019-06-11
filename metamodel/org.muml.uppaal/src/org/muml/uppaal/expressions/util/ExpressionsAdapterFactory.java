@@ -19,7 +19,6 @@ import org.muml.uppaal.expressions.Expression;
 import org.muml.uppaal.expressions.ExpressionsPackage;
 import org.muml.uppaal.expressions.FunctionCallExpression;
 import org.muml.uppaal.expressions.IdentifierExpression;
-import org.muml.uppaal.expressions.IncrementDecrementExpression;
 import org.muml.uppaal.expressions.LiteralExpression;
 import org.muml.uppaal.expressions.LogicalExpression;
 import org.muml.uppaal.expressions.MinMaxExpression;
@@ -146,8 +145,12 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 				return createQuantificationExpressionAdapter();
 			}
 			@Override
-			public Adapter caseIncrementDecrementExpression(IncrementDecrementExpression object) {
-				return createIncrementDecrementExpressionAdapter();
+			public Adapter casePostIncrementDecrementExpression(PostIncrementDecrementExpression object) {
+				return createPostIncrementDecrementExpressionAdapter();
+			}
+			@Override
+			public Adapter casePreIncrementDecrementExpression(PreIncrementDecrementExpression object) {
+				return createPreIncrementDecrementExpressionAdapter();
 			}
 			@Override
 			public Adapter caseBitShiftExpression(BitShiftExpression object) {
@@ -396,16 +399,30 @@ public class ExpressionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.uppaal.expressions.IncrementDecrementExpression <em>Increment Decrement Expression</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.uppaal.expressions.PreIncrementDecrementExpression <em>Pre Increment Decrement Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.uppaal.expressions.IncrementDecrementExpression
+	 * @see org.muml.uppaal.expressions.PreIncrementDecrementExpression
 	 * @generated
 	 */
-	public Adapter createIncrementDecrementExpressionAdapter() {
+	public Adapter createPreIncrementDecrementExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.uppaal.expressions.PostIncrementDecrementExpression <em>Post Increment Decrement Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.uppaal.expressions.PostIncrementDecrementExpression
+	 * @generated
+	 */
+	public Adapter createPostIncrementDecrementExpressionAdapter() {
 		return null;
 	}
 

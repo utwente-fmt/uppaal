@@ -1,3 +1,4 @@
+
 package nl.utwente.ewi.fmt.uppaalSMC;
 
 import org.muml.uppaal.declarations.Parameter;
@@ -25,9 +26,9 @@ public class Serialization extends UppaalSerialization {
 		if (p == null)
 			return "";
 		StringBuilder ret = new StringBuilder(" x=\"");
-		ret.append(Integer.toString(p.getX()));
+		ret.append(p.getX());
 		ret.append("\" y=\"");
-		ret.append(Integer.toString(p.getY()));
+		ret.append(p.getY());
 		ret.append('"');
 		return ret;
 	}
@@ -35,7 +36,7 @@ public class Serialization extends UppaalSerialization {
 	@Override
 	public CharSequence location(Location l)
 	{
-		StringBuilder b = new StringBuilder();
+		StringBuilder b;
 		if (l instanceof ChanceNode) {
 			b = new StringBuilder("<branchpoint id=\"");
 		} else if (l instanceof  ExponentialLocation) {
@@ -82,8 +83,8 @@ public class Serialization extends UppaalSerialization {
 			for (Selection s : e.getSelection()) {
 				if (!first) {
 					ret.append(", ");
-					first = false;
 				}
+				first = false;
 				ret.append(selection(s));
 			}
 			ret.append("</label>");
@@ -94,14 +95,14 @@ public class Serialization extends UppaalSerialization {
 			for (Expression s : e.getUpdate()) {
 				if (!first) {
 					ret.append(", ");
-					first = false;
 				}
+				first = false;
 				ret.append(expression(s));
 			}
 			ret.append("</label>");
 		}
 		ret.append("<label kind=\"probability\">");
-		ret.append(Integer.toString(((ChanceEdge)e).getWeight()));
+		ret.append(expression(((ChanceEdge)e).getWeight()));
 		ret.append("</label></transition>");
 		return ret;
 	}
@@ -117,8 +118,8 @@ public class Serialization extends UppaalSerialization {
 			for (Parameter p : t.getParameter()) {
 				if (!first) {
 					ret.append(", ");
-					first = false;
 				}
+				first = false;
 				ret.append(parameter(p));
 			}
 			ret.append("</parameter>");
